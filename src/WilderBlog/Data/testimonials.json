@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "link": "https://www.linkedin.com/in/saigkill/",
+    "blurp": "Sascha is one of the most active and enthusiastic members of openSUSE Marketing Team and the Second Chief-Editor of openSUSE Weekly News. I love so much working with him. ;-)",
+    "recommender": "Satoru Matsumoto",
+    "recommenderJob": "Member of the openSUSE Project",
+    "recommenderLocation": "Tokyo, Japan",
+    "relationship": "working in the same project",
+    "imagePath": "https://media.licdn.com/dms/image/C5603AQF7YjAOkO_flg/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=hFDjKw967SCs1l8laP_TyfjxbWwiV4h1T2qMtc7O-Mw",
+    "date": "2009-12-04"
+  },
+  {
+    "id": "2",
+    "link": "https://www.linkedin.com/in/saigkill/",
+    "blurp": "Sascha is currently the main driving force behind the openSUSE Weekly news letter. He works together with different community members world wide to create the newsletter. During his time as editor and due to his efforts, the weekly news team has grown and the news letter gets translated in more than a dozen languages. I appreciate the enthusiasm Sascha shows for openSUSE marketing in general and for the news letter especially.",
+    "recommender": "Andreas Jaeger",
+    "recommenderJob": "Product Manager at SUSE",
+    "recommenderLocation": "Nuernberg, Germany",
+    "relationship": "working in the same project",
+    "imagePath": "https://media.licdn.com/dms/image/C5103AQHA_20s0QmHZA/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=1GJwFzeZ23mb_CNM9v48fvHjdsaAHCA1aG2IHkuoFPc",
+    "date": "2010-02-04"
+  },
+  {
+    "id": "3",
+    "link": "https://www.linkedin.com/in/saigkill/",
+    "blurp": "Sascha is an excellent leader and a very skilled one.",
+    "recommender": "Marco Antonio Flores",
+    "recommenderJob": "Computer Systems Engineer",
+    "recommenderLocation": "Polanco I Seccion, Mexico City, Mexico",
+    "relationship": "worked in Saschas Project",
+    "imagePath": "https://media.licdn.com/dms/image/C4D03AQEl76UI24Arng/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=9aGQs1QeOIw2Sx0Ejju2blqS29u92tSN548EMtArphk",
+    "date": "2019-04-25"
+  }
+]

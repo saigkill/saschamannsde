@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WilderBlog.Services.DataProviders.Talk>
+@{
+    ViewBag.Title = "My Talks - Sascha Manns's Twilight Zone";
+    ViewBag.PageName = "My Talks";
+    ViewBag.PageBlurb = "A collection of my held talks";
+    ViewBag.PageImage = "/img/headers/code2.jpg";
+}
+@inject IConfiguration config
+@section styles {
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/slick-carousel/slick.css" />
+        <link rel="stylesheet" href="~/lib/slick-carousel/slick-theme.css" />
+    </environment>
+    <environment names="Production,Staging">
+        <link rel="stylesheet" href="~/lib/slick-carousel/slick.css" />
+        <link rel="stylesheet" href="~/lib/slick-carousel/slick-theme.css" />
+    </environment>
+}
+@section scripts {
+    <environment names="Development">
+        <script src="~/lib/slick-carousel/slick.js"></script>
+        <script src="~/js/TalksSlider.js"></script>
+    </environment>
+    <environment names="Production,Staging">
+        <script></script>
+    </environment>
+
+}
+<div class="row">
+    <p>In the last years i held some talks on Linux Events. Here some of my slides:</p>
+    @foreach (var t in Model)
+    {
+        <div class="col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card ">
+                <div class="card-body">
+                    <button class="btn btn-outline-primary pull-right talk-toggle" data-id="@t.Id">Show Talk</button>
+                    @*<a class="btn btn-outline-primary pull-right" asp-controller="Talks" asp-action="Talk" asp-route-id="@t.Id" target="_blank" role="button">View in new Tab</a>*@
+                    <h3 itemprop="headline" class="card-title">@t.Title</h3>
+                    <div class="card-text"><small>Held: @t.Date.ToString("D") on @t.Where</small></div>
+                    <p class="card-text">@t.Blurp</p>
+
+                </div>
+                <div class="collapse" id="talk-@t.Id">
+                    <iframe src="@t.Link" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe><div style="margin-bottom:5px"> <strong> <a href="@t.Link" title="@t.Title" target="_blank">@t.Title</a> </strong> von <strong><a href="https://www.slideshare.net/saigkill" target="_blank">Sascha Manns</a></strong> </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

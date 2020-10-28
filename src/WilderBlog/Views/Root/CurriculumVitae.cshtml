@@ -1,0 +1,824 @@
+﻿@inject WilderBlog.Services.DataProviders.PublicationsProvider publications
+@{
+    ViewData["Title"] = "Sascha Manns's Twilight Zone";
+    Layout = "~/Views/Shared/_LayoutCV.cshtml";
+    int age = DateTime.Now.Year - 1979;
+}
+<!--=========welcome_area=========-->
+<div class="welcome_area">
+    <div class="container">
+        <div class="welcome_wraper wow fadeInUp">
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="w_img_slide">
+                        <!--========= single img1=========-->
+                        <div class="single_slide"><img src="~/img/me/profil.jpg" alt=""></div>
+                        <!--<div class="single_slide"><img src="~/img/misc/Manns_Wappen.png" alt=""</div>-->
+                        <!--=========end single img1 =========-->
+                        <!--========= single img2=========-->
+                        <div class="single_slide"><img src="~/img/me/Sascha.jpg" alt="" width="60%"></div>
+                        <!--=========end single img2 =========-->
+                        <!--========= single img 3=========-->
+                        <div class="single_slide"><img src="~/img/me/side.jpg" alt=""></div>
+                        <!--=========end single img =========-->
+                    </div>
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="w_content_slide">
+                        <!--=========e single slider content =========-->
+                        <div class="single_c_slider">
+                            <div class="w_content">
+                                <h1><span>Hi</span> <br> I am Sascha Zyroslaw Kyrill Manns.</h1>
+                                <span>I am a @age old <span id="replaceJobs"></span></span>
+                                <p>In the year 2009 i founded a openSUSE based distribution for doctors and hospitals, which provides many open source software for the medical context. It targets people in poor countries, which can't buy expensive proprietary tools.</p>
+                                <p>Last years i spent time into learning Ruby, Python, JavaScript, C# and finished a SCRUM Master Course.</p>
+                                <div class="w-btn">
+                                    <a href="mailto:Sascha.Manns@@outlook.de?subject=I%20want%20you&amp;body=We%20want%20a%20beast%20like%20you" class="w_btn1">Hire me</a>
+                                    <a href="~/downloads/curriculum_vitae.pdf" target="_blank" class="w_btn2">Download Resume</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--=========e end single slider content =========-->
+                        <!--=========e single slider content =========-->
+                        <div class="single_c_slider">
+                            <div class="w_content">
+                                <h1><span>Hi</span> <br> I am Sascha Zyroslaw Kyrill Manns.</h1>
+                                <span>I am a @age old <span id="replaceJobs"></span></span>
+                                <p>In the year 2009 i founded a openSUSE based distribution for doctors and hospitals, which provides many open source software for the medical context. It targets people in poor countries, which can't buy expensive proprietary tools.</p>
+                                <p>Last years i spent time into learning Ruby, Python, JavaScript, C# and finished a SCRUM Master Course.</p>
+                                <div class="w-btn">
+                                    <a href="mailto:Sascha.Manns@@outlook.de?subject=I%20want%20you&amp;body=We%20want%20a%20beast%20like%20you" class="w_btn1">Hire me</a>
+                                    <a href="~/downloads/curriculum_vitae.pdf" target="_blank" class="w_btn2">Download Resume</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--=========eend single slider content =========-->
+                        <!--=========e single slider content =========-->
+                        <div class="single_c_slider">
+                            <div class="w_content">
+                                <h1><span>Hi</span> <br> I am Sascha Zyroslaw Kyrill  Manns.</h1>
+                                <span>I am a @age old <span id="replaceJobs"></span></span>
+                                <p>In the year 2009 i founded a openSUSE based distribution for doctors and hospitals, which provides many open source software for the medical context. It targets people in poor countries, which can't buy expensive proprietary tools.</p>
+                                <p>Last years i spent time into learning Ruby, Python, JavaScript, C# and finished a SCRUM Master Course.</p>
+                                <div class="w-btn">
+                                    <a href="mailto:Sascha.Manns@@outlook.de?subject=I%20want%20you&amp;body=We%20want%20a%20beast%20like%20you" class="w_btn1">Hire me</a>
+                                    <a href="~/downloads/curriculum_vitae.pdf" target="_blank" class="w_btn2">Download Resume</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--=========e end single slider content =========-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=========end welcome_area=========-->
+<!--=========end hero_area=========-->
+<!--
+==========+/+/+/+/+/+/+/+/+/=========
+                about area
+==========+/+/+/+/+/+/+/+/+/=========
+-->
+<div class="about_area sp" id="resume">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 wow fadeInUp">
+                <!--=========edu section title content =========-->
+                <div class="about_title">
+                    <h1>Education History</h1>
+                </div>
+                <!--=========end section title content =========-->
+                <!--=========education =========-->
+                <div class="about_main">
+                    <!--=========single_about =========-->
+                    <div class="single_about">
+                        <div class="main_content">
+                            <div class="about_content">
+                                <h4>Specialist Application Development</h4>
+                                <span>ILS Germany</span>
+                                <span>
+                                    Object orientated programming with VB: Classes, Inheritance, UML, Windows User Interfaces, Databases, SQL, ADO.NET and XML., MS-Access: Basics, Databasetheory, VBA
+                                </span>
+                            </div>
+                            <div class="about_year">
+                                <span>
+                                    2019 - 2020
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========single_about =========-->
+                    <div class="single_about">
+                        <div class="main_content">
+                            <div class="about_content">
+                                <h4>Web Engineering</h4>
+                                <span>Mittelhessen University of Applied Sciences</span>
+                            </div>
+                            <div class="about_year">
+                                <span>
+                                    2014
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========single_about =========-->
+                    <div class="single_about">
+                        <div class="main_content">
+                            <div class="about_content">
+                                <h4>Retail merchant</h4>
+                                <span>Chamber of Industry and Commerce</span>
+                            </div>
+                            <div class="about_year">
+                                <span>
+                                    1998
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                </div>
+                <!--=========end education=========-->
+            </div>
+            <div class="col-sm-6 wow fadeInUp">
+                <!--=========Experience section title content =========-->
+                <div class="about_title ex_title">
+                    <h1>Professional Experience</h1>
+                </div>
+                <!--=========end Experience section title content =========-->
+                <!--=========Experience =========-->
+                <div class="about_main about_expert ">
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Softwaredeveloper Cache Database</h4>
+                                <span>Logis Softwareentwicklung GmbH</span>
+                                <p>Conception and Programmig of business applications and processes.</p>
+                                <p>Stack: C#, Visual Basic 6, Cache, Windows</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2020-2020
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>App &amp; Web Developer</h4>
+                                <span>CPS solutions GmbH &amp; Co. KG </span>
+                                <p>Full-Stack Web Development and implementation of business workflows.</p>
+                                <p>Stack: JavaScript, PHP, WordPress, Windows, MS-SQL, MYSQL</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2018-2019
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Author Qualitymanagement and Productmanagement</h4>
+                                <span>XCOM AG (now Fintech)</span>
+                                <p>Writing handbooks and internal documentation</p>
+                                <p>Stack: XML, DocBook, Ruby, C#, Linux</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2015
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Dispatcher Benutzerverwaltung</h4>
+                                <span>ITS Care (IT Solutions for AOK Healthcare) </span>
+                                <p>Managing team for solving requests from health insurance based on Service Level Agreements.</p>
+                                <p>Stack: Windows, SAP Amsys, Active Directory</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2014
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Marketing Team, Features Screening Team, Membership Application Team, BuildService</h4>
+                                <span>openSUSE Community</span>
+                                <p>Founder of a Linux distribution for healthcare needs.</p>
+                                <p>Editor in Chief for the openSUSE Newsletter (published in ~12 native Languages).</p>
+                                <p>Pre-Viewed incoming feature requests, tried to make it clearer to make it better to implement by the developers.</p>
+                                <p>Pre-Viewed Membership Applications for "openSUSE Member"</p>
+                                <p>Build binary packages for the BuildService.</p>
+                                <p>Stack: Linux, DocBook, Shell (Bash), Make</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2014
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Author &amp; Publisher</h4>
+                                <span>Lulu Inc. Raleigh/USA</span>
+                                <p>Wrote a handbook (german/english) for Plasma Active (a User Experience for new device classes)</p>
+                                <p>Stack: Linux, DocBook</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2013
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Community &amp; Support Agent</h4>
+                                <span>open-slx GmbH</span>
+                                <p>Wrote a handbook (german/english) for the openSUSE Box and it's (occasionally) Successor "Balsam Professional"</p>
+                                <p>Extending the Community.</p>
+                                <p>Giving Support via Email/Phone/Forum/IRC</p>
+                                <p>Stack: Linux, DocBook, Shell (Bash), Make</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2013
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Mentor / Coach (Google CodeIn)</h4>
+                                <span>Google Inc. / KDE Project</span>
+                                <p>Guided students to write, build and publish a handbook for software.</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2012
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                    <!--=========  single_about =========-->
+                    <div class="single_about single_expart">
+                        <div class="main_content ">
+                            <div class="about_content expert_content">
+                                <h4>Co-Founder of the press service group (supporter of federal press office)</h4>
+                                <span>Pirate Party Germany</span>
+                                <p>Co-Founder and SDupporter of SG Press</p>
+                            </div>
+                            <div class="about_year expert_year">
+                                <span>
+                                    2011-2012
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=========end  single_about =========-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=========end about_area=========-->
+<!--
+==========+/+/+/+/+/+/+/+/+/=========
+                skill area
+==========+/+/+/+/+/+/+/+/+/=========
+-->
+<div class="skill_area spb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--=========skill section title content =========-->
+                <div class="section_title">
+                    <h1>Skills</h1>
+                </div>
+                <!--=========end skill section title content =========-->
+            </div>
+        </div>
+        <div class=" skill_wraper">
+            <div class="row">
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>JavaScript</h4>
+                        </div>
+                        <div id="bar1" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="60"></span>
+                        </div>
+                    </div>
+                    <!--========= endsingle_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>HTML & CSS</h4>
+                        </div>
+                        <div id="bar2" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="80"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 sm">
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>Node.js</h4>
+                        </div>
+                        <div id="bar3" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="60"></span>
+                        </div>
+                    </div>
+                    <!--=========end single_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>.NET Core/MVC/EF/WPF</h4>
+                        </div>
+                        <div id="bar4" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="80"></span>
+                        </div>
+                    </div>
+                    <!--========= end single_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>Ruby</h4>
+                        </div>
+                        <div id="bar5" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="60"></span>
+                        </div>
+                    </div>
+                    <!--=========end single_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>T-SQL/MySQL</h4>
+                        </div>
+                        <div id="bar6" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="80"></span>
+                        </div>
+                    </div>
+                    <!--========= end single_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>SOAP</h4>
+                        </div>
+                        <div id="bar7" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="90"></span>
+                        </div>
+                    </div>
+                    <!--========= end single_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>Wordpress</h4>
+                        </div>
+                        <div id="bar8" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="80"></span>
+                        </div>
+                    </div>
+                    <!--========= end single_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>.NET Framework/Windows Forms/Visual Basic .NET</h4>
+                        </div>
+                        <div id="bar9" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="80"></span>
+                        </div>
+                    </div>
+                    <!--========= end single_skills=========-->
+                </div>
+                <div class="col-sm-6 sm">
+                    <!--========= single_skills=========-->
+                    <div class="single_skill">
+                        <div class="skill_title">
+                            <h4>Intersystems Cache</h4>
+                        </div>
+                        <div id="bar10" class="barfiller">
+                            <span class="tip"></span>
+                            <span class="fill" data-percentage="50"></span>
+                        </div>
+                    </div>
+                    <!--========= end single_skills=========-->
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="resume-skill-item">
+                    <div class="section_title">
+                        <h1>Other Skills</h1>
+                    </div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><span class="badge badge-light">SCRUM</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">Unix</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">Linux</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">Windows</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">Joomla</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">Engomo Platform</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">Apache httpd / Tomcat</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">BPMN</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">UML</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">DocBook / XSL-FO</span></li>
+                        <li class="list-inline-item"><span class="badge badge-light">ITIL / SLA</span></li>
+                    </ul>
+                </div><!--//resume-skill-item-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--=========end skill_area=========-->
+
+<div class="skill_area spb">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="section_title">
+                    <h1>Publications</h1>
+                </div>
+                <div class="">
+                    @foreach (var pub in publications.Get())
+                    {
+                        <div class="single_about single_expart">
+                            <div class="card-header">
+                                <h4 class="card-subtitle"><a href="@pub.Link" target="_blank">@pub.Title</a></h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text"><small>@pub.Comments</small></div>
+                                <div class="card-text"><small>@pub.PublicationName - @pub.Publisher</small></div>
+                                @if (!string.IsNullOrWhiteSpace(pub.Identifier))
+                                {
+                                    <div class="muted"><small>@pub.Identifier, Published: <time datetime="@pub.DatePublished">@pub.DatePublished</time></small></div>
+                                }
+                                else
+                                {
+                                    <div class="muted"><small>Published: @pub.DatePublished</small></div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-sm-6 mb-30">
+                <div class="section_title">
+                    <h1>Open Source Projects</h1>
+                </div>
+                <div class="card" id="openSourceList">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div id="misc-skills">
+            <div class="col-sm-12 mb-30">
+                <div class="section_title">
+                    <h1>My last Github Contributions</h1>
+                </div>
+                <div class="calendar">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+==========+/+/+/+/+/+/+/+/+/=========
+                service area
+==========+/+/+/+/+/+/+/+/+/=========
+-->
+<div class="service_area sp" id="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--========= section_title=========-->
+                <div class="section_title">
+                    <h1>Service</h1>
+                </div>
+                <!--=========end section_title=========-->
+            </div>
+        </div>
+        <!--========= serviece wrapper=========-->
+        <div class="service_wraper wow fadeInUp">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 fm">
+                    <!--========= single_serviece=========-->
+                    <div class="single_service">
+                        <div class="service_icon">
+                            <div class="s_icon_img">
+                                <i class="icofont icofont-monitor"></i>
+                            </div>
+                        </div>
+                        <div class="service_content">
+                            <h3>Full-Stack Development</h3>
+                            <p>
+                                Creating Apps based on your Workflow. Also i'm building professional Websites to pacify your needs.
+                            </p>
+                        </div>
+                    </div>
+                    <!--=========enc single_serviece=========-->
+                </div>
+                <div class="col-md-3 col-sm-6 fm">
+                    <!--========= single_serviece=========-->
+                    <div class="single_service">
+                        <div class="service_icon">
+                            <div class="s_icon_img">
+                                <i class="icofont icofont-book"></i>
+                            </div>
+                        </div>
+                        <div class="service_content">
+                            <h3>Writing</h3>
+                            <p>
+                                Building User-, Project- or Development documentations as Web- or Paperversion.
+                            </p>
+                        </div>
+                    </div>
+                    <!--========= end single_serviece=========-->
+                </div>
+                <div class="col-md-3 col-sm-6 fm">
+                    <!--========= single_serviece=========-->
+                    <div class="single_service">
+                        <div class="service_icon">
+                            <div class="s_icon_img">
+                                <i class="icofont icofont-mic"></i>
+                            </div>
+                        </div>
+                        <div class="service_content">
+                            <h3>Coaching</h3>
+                            <p>
+                                I'll provide help for installation a Linux Distribution and provide some courses for Bash programming.
+                            </p>
+                        </div>
+                    </div>
+                    <!--========= end single_serviece=========-->
+                </div>
+                <div class="col-md-3 col-sm-6 fm">
+                    <!--========= single_serviece=========-->
+                    <div class="single_service">
+                        <div class="service_icon">
+                            <div class="s_icon_img">
+                                <i class="icofont icofont-brand-linux"></i>
+                            </div>
+                        </div>
+                        <div class="service_content">
+                            <h3>Open Source</h3>
+                            <p>
+                                I'm happy to share (most of) my coding projects as open-source.
+                            </p>
+                        </div>
+                    </div>
+                    <!--=========end single_serviece=========-->
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <!--=========end serviece wrapper=========-->
+        <div class="row">
+            <div class="section_title">
+                <h1>Testimonials</h1>
+            </div>
+            <div class="col-md-offset-2 col-md-8">
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="~/img/testimonials/satoru.jpg" alt="">
+                        </div>
+                        <p class="description">
+                            Sascha is one of the most active and enthusiastic members of openSUSE Marketing Team and the Second Chief-Editor of openSUSE Weekly News. I love so much working with him. ;-)
+                        </p>
+                        <h3 class="title">
+                            Satoru Matsumoto
+                            <span class="post"> - Member at openSUSE Project, Tokyo, Japan</span>
+                        </h3>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="~/img/testimonials/andreas.jpg" alt="">
+                        </div>
+                        <p class="description">
+                            Sascha is currently the main driving force behind the openSUSE Weekly news letter. He works together with different community members world wide to create the newsletter. During his time as editor and due to his efforts, the weekly news team has grown and the news letter gets translated in more than a dozen languages. I appreciate the enthusiasm Sascha shows for openSUSE marketing in general and for the news letter especially.
+                        </p>
+                        <h3 class="title">
+                            Andreas Jaeger
+                            <span class="post"> - Productmanager at SUSE, Nurnberg, Germany</span>
+                        </h3>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="~/img/testimonials/alpvonkri.jpg" alt="">
+                        </div>
+                        <p class="description">
+                            Sascha is an excellent leader and a very skilled one.
+                        </p>
+                        <h3 class="title">
+                            Marco Antonio Flores
+                            <span class="post"> - Computer Systems Engineer, Polanco, Mexico</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=========end serviece wraper=========-->
+<!--
+==========+/+/+/+/+/+/+/+/+/=========
+                hobby area
+==========+/+/+/+/+/+/+/+/+/=========
+-->
+<div class="hobby_area spb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--========= section title=========-->
+                <div class="section_title">
+                    <h1>Hobby & Interest</h1>
+                </div>
+                <!--========= end section_title=========-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="hobby">
+                    <span class="hicon"><i class="icofont icofont-keyboard"></i></span>
+                    <span class="hicon"><i class="icofont icofont-book-alt"></i></span>
+                    <span class="hicon"><i class="icofont icofont-music"></i></span>
+                    <span class="hicon"><i class="icofont icofont-video-alt"></i></span>
+                    <span class="hicon"><i class="icofont icofont-tea"></i></span>
+                    <span class="hicon"><i class="icofont icofont-pencil"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--========= end hobby area=========-->
+<!--
+==========+/+/+/+/+/+/+/+/+/=========
+                portfolio area
+==========+/+/+/+/+/+/+/+/+/=========
+-->
+<div class="portfolio_area sp" id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--========= section title=========-->
+                <div class="section_title">
+                    <h1>Portfolio</h1>
+                </div>
+                <!--========= end section title=========-->
+            </div>
+        </div>
+        <div class="portfolio_wraper wow fadeInUp">
+            <div class="row">
+                <!--                <div class="col-md-1">-->
+                <!--========= portfolio_menu =========-->
+                <div class="portfolio_menu col-md-1">
+                    <ul>
+                        <li data-filter="*" class="active">All</li>
+                        <li data-filter=".Writing">Writing</li>
+                        <li data-filter=".Website">Website</li>
+                        <li data-filter=".Apps">Apps</li>
+                        <li data-filter=".Coaching">Coaching</li>
+                    </ul>
+                </div>
+                <!--=========end portfolio_menu =========-->
+                <!--                </div>-->
+                <!--========= portfolio_items =========-->
+                <div class="col-md-12 portfolio_items">
+                    <div class="row">
+                        <!--========= single portfolio =========-->
+                        <div class="col-md-5 col-sm-4 Website single_portfolio width-one">
+                            <a href="https://afh-neuwied.de/" class="portfolio_img">
+                                <img src="~/img/portfolio/afh.png" alt="">
+                            </a>
+                        </div>
+                        <!--========= end single portfolio =========-->
+                        <!--========= single portfolio =========-->
+                        <div class="col-sm-3 Website single_portfolio width-two">
+                            <a href="https://www.htz-neuwied.de/" class="portfolio_img">
+                                <img src="~/img/portfolio/htz.png" alt="">
+                            </a>
+                        </div>
+                        <!--========= end single portfolio =========-->
+                        <!--========= single portfolio =========-->
+                        <div class="col-sm-3 Website single_portfolio width-two">
+                            <a href="http://www.vmb-neuwied.de/" class="portfolio_img">
+                                <img src="~/img/portfolio/vmb.png" alt="">
+                            </a>
+                        </div>
+                        <!--========= end single portfolio =========-->
+                        <!--========= single portfolio =========-->https://raw.githubusercontent.com/saigkill/latex_curriculum_vitae-dotnet/master/docs/doc/images/WriteJobApplication.png
+                        <div class="col-sm-3 padding Website single_portfolio width-two">
+                            <a href="https://myflow365.de/" class="portfolio_img">
+                                <img src="~/img/portfolio/myflow365.png" alt="">
+                            </a>
+                        </div>
+                        <!--=========end single portfolio =========-->
+                        <!--========= single portfolio =========-->
+                        <div class="col-sm-3 padding Apps single_portfolio width-two">
+                            <a href="http://saigkill.github.io/latex_curriculum_vitae-dotnet" class="portfolio_img">
+                                <img src="https://raw.githubusercontent.com/saigkill/latex_curriculum_vitae-dotnet/master/docs/doc/images/WriteJobApplication.png" alt="">
+                            </a>
+                        </div>
+                        <!--=========end single portfolio =========-->
+                        <!--========= single portfolio =========-->
+                        <div class="col-sm-3 padding Writing single_portfolio width-two">
+                            <a href="~/img/portfolio/book.png" class="portfolio_img">
+                                <img src="~/img/portfolio/book.png" alt="">
+                            </a>
+                        </div>
+                        <!--=========end single portfolio =========-->
+                        <!--========= single portfolio =========-->
+                        <div class="col-sm-3 padding Apps single_portfolio width-two">
+                            <a href="~/img/portfolio/Standard.jpg" class="portfolio_img">
+                                <img src="~/img/portfolio/Standard.jpg" alt="">
+                            </a>
+                        </div>
+                        <!--=========end single portfolio =========-->
+                        <!--========= single portfolio =========-->
+                        <div class="col-sm-3 padding Coaching single_portfolio width-two">
+                            <a href="~/img/me/side.jpg" class="portfolio_img">
+                                <img src="~/img/me/side.jpg" alt="">
+                            </a>
+                        </div>
+                        <!--=========end single portfolio =========-->
+                        <!--========= single portfolio =========-->
+                        <div class="col-sm-3 padding Coaching single_portfolio width-two">
+                            <a href="~/img/me/profil.jpg" class="portfolio_img">
+                                <img src="~/img/me/profil.jpg" alt="">
+                            </a>
+                        </div>
+                        <!--=========end single portfolio =========-->
+                    </div>
+                    <!--=========  end portfolio_items =========-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--========= end portfolio  area=========-->

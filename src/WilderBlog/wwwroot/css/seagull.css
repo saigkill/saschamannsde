@@ -1,0 +1,35 @@
+﻿@charset "utf-8";
+/**
+ * style.css
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation, either version 3 of the License, or (at your option) any
+ * later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <https://gnu.org/licenses/lgpl.txt>.
+ *
+ * @project      Weblog and Open Source Projects of Sascha Manns
+ * @package      xhtml-css
+ * @author       Sascha Manns <Sascha.Manns@outlook.de>
+ * @copyright    2016 Sascha Manns
+ * @cssdoc       version 1.0-pre
+ * @license      httpss://gnu.org/licenses/lgpl.txt LGPL-3.0+
+ * @link         httpss://saigkills-backtrace.de
+ * @media        all
+ * @valid        true
+ */
+
+@font-face {
+    font-family: 'Segoe UI Light';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Segoe UI Light'), local('SegoeUILight'), url(../fonts/TTF/segoeuil.ttf) format('ttf');
+    /* unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; */
+}

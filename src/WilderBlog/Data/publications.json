@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "comments": "Sascha Manns et al",
+    "datePublished": "01/01/09",
+    "isBook": false,
+    "link": "https://news.opensuse.org/tag/newsletter",
+    "publicationName": "news.opensuse.org",
+    "publisher": "news.opensuse.org",
+    "title": "openSUSE Weekly News",
+    "identifier": ""
+  },
+  {
+    "id": 2,
+    "comments": "Sascha Manns",
+    "datePublished": "01/01/10",
+    "isBook": false,
+    "link": "https://ds.ccc.de/pdfs/ds094.pdf",
+    "publicationName": "Die Datenschleuder 94",
+    "publisher": "Chaos Computer Club",
+    "title": "Praxis Dr. Datenbrief - Ein Selbstversuch",
+    "identifier": "ISSN: 0930-1054"
+  },
+  {
+    "id": 3,
+    "comments": "Sascha Manns",
+    "datePublished": "01/06/10",
+    "isBook": false,
+    "link": "https://ds.ccc.de/pdfs/ds096.pdf",
+    "publicationName": "Die Datenschleuder 96, ISSN: 0930-1054",
+    "publisher": "Chaos Computer Club",
+    "title": "Call for Contribution: Die Datenkrake auspressen",
+    "identifier": ""
+  },
+  {
+    "id": 4,
+    "comments": "Sascha Manns & Jens Koeke",
+    "datePublished": "01/01/11",
+    "isBook": true,
+    "link": "https://d-nb.info/1016808844",
+    "publicationName": "openSUSE Startup Guide",
+    "publisher": "open-slx GmbH",
+    "title": "openSUSE Startup Guide",
+    "identifier": ""
+  },
+  {
+    "id": 5,
+    "comments": "Sascha Manns et al",
+    "datePublished": "01/01/12",
+    "isBook": false,
+    "link": "https://openslxowr.sourceforge.net",
+    "publicationName": "open-slx Weekly News",
+    "publisher": "open-slx GmbH",
+    "title": "open-slx Weekly News",
+    "identifier": "ISSN: 2195-5344"
+  },
+  {
+    "id": 6,
+    "comments": "Sascha Manns & Casey Takahashi",
+    "datePublished": "01/01/13",
+    "isBook": true,
+    "link": "https://d-nb.info/1042698783",
+    "publicationName": "Plasma Active 4 Handbook",
+    "publisher": "Lulu.com, Raleigh",
+    "title": "Plasma Active 4 Handbook",
+    "identifier": "ISBN: 978-1-291-57705-1"
+  }
+]

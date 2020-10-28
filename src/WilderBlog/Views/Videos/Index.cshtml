@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WilderBlog.Services.DataProviders.Video>
+@{
+    ViewBag.Title = "My Videos - Shawn Wildermuth's Rants and Raves";
+    ViewBag.PageName = "My Videos";
+    ViewBag.PageBlurb = "A collection of my instructional videos";
+    ViewBag.PageImage = "/img/headers/video.jpg";
+}
+<div class="row">
+    @foreach (var v in Model)
+    {
+        <div class="col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="float-right"><small>Published: @v.DatePublished.ToString("D")</small></div>
+            <h4>@v.Title</h4>
+            <p class="card-text">@v.Description</p>
+            <button class="btn btn-outline-primary pull-right video-toggle" data-id="@v.Id">Show Video</button>
+            <a class="btn btn-outline-primary pull-right" asp-controller="Videos" asp-action="Video" asp-route-id="@v.Id" target="_blank" role="button">View in new Tab</a>
+
+            <div class="video-container collapse" id="video-@v.Id">
+                <partial name="_VideoFrame" model="v" />
+            </div>
+            <hr />
+        </div>
+    }
+</div>

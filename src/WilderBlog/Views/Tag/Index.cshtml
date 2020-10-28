@@ -1,0 +1,21 @@
+﻿@model BlogResult
+@{
+    ViewBag.Title = $"Tag: {ViewContext.RouteData.Values["tag"]} - Sascha Manns's Twilight Zone";
+    ViewBag.PageName = $"Stories";
+    ViewBag.PageBlurb = $"Tagged with {ViewContext.RouteData.Values["tag"]}";
+    ViewBag.PageImage = "/img/headers/search.jpg";
+    ViewBag.ControllerName = "Tag";
+}
+@if (Model.Stories != null)
+{
+    @foreach (var story in Model.Stories)
+    {
+        <partial name="_StoryBrief" model="story" />
+    }
+
+    <div class="row">
+        <div class="col-lg-12">
+            <partial name="_Pager" />
+        </div>
+    </div>
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Getting to know the openSUSE Weekly News",
+    "where": "openSUSE Conference",
+    "link": "https://www.slideshare.net/slideshow/embed_code/key/sp2Rfvrin8RudB",
+    "blurp": "What are the openSUSE Weekly News, and how can i help out?",
+    "talkType": "Slideshare",
+    "date": "2010-01-29"
+  },
+  {
+    "id": "2",
+    "title": "Teilnehmen an freier Software oder openSource Projekten",
+    "where": "openSUSE Conference",
+    "link": "https://www.slideshare.net/slideshow/embed_code/key/iqRWnarALAI9Th",
+    "blurp": "Was ist freie Software und wie kann ich partizipieren?",
+    "talkType": "Slideshare",
+    "date": "2010-06-13"
+  },
+  {
+    "id": "3",
+    "title": "openSUSE Weekly News",
+    "where": "openSUSE Community Week",
+    "link": "https://www.slideshare.net/slideshow/embed_code/key/EGK8xjfGq6OKGa",
+    "blurp": "What are the openSUSE Weekly News, and how can i help out?",
+    "talkType": "Slideshare",
+    "date": "2015-03-08"
+  },
+  {
+    "id": "4",
+    "title": "openSUSE Weekly News - Translate into your Language",
+    "where": "openSUSE Community Week",
+    "link": "https://www.slideshare.net/slideshow/embed_code/key/J0JPPDwZyzeqkC",
+    "blurp": "How can i translate the weekly news into my language?",
+    "talkType": "Slideshare",
+    "date": "2015-03-08"
+  }
+]

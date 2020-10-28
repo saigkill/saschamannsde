@@ -1,0 +1,93 @@
+﻿@model BlogStory
+@inject WilderBlog.Services.AdService ads
+@inject Microsoft.Extensions.Configuration.IConfiguration config
+@{
+    ViewBag.Title = $"{Model.Title} - Sascha Manns";
+    ViewBag.PageImage = "/img/headers/code2.jpg";
+    var pubDate = Model.DatePublished.AddHours(-4).ToString("MMM dd, yyyy");
+    var word_count = @Model.Body; // Get all content of the story
+    var counts = word_count.Count(ch => ch == ' ') + 1;
+    var minutes = counts / 200; // Calculate Minutes
+    var seconds = counts % 200 / (200 / 60); // Calculate Seconds
+    var str_minutes = (minutes == 1) ? "Minute " : "Minutes ";
+    var str_seconds = (seconds == 1) ? "Second " : "Seconds ";
+}
+<div class="p-2">
+    <div>
+        <h2 class="story-title">@Model.Title</h2>
+        <!-- @Model.Id -->
+        <hr />
+        <p class="post-meta">
+            <i class="fas fa-pencil"></i>
+            Sascha Manns<br />
+            <i class="fas fa-clock"></i>
+            @minutes @str_minutes  @seconds @str_seconds <br />
+            <i class="fas fa-calendar"></i>
+            @pubDate<br />
+            <i class="fas fa-tags"></i>
+            @foreach (var tag in Model.Categories.Split(','))
+            {
+                <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
+            }
+            <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
+        </p>
+    </div>
+    <div class="post-card">
+        @Html.Raw(Model.Body)
+    </div>
+    <div class="card">
+        <div class="card-text">
+            <small>If you liked this article, so <a target="_blank" href="https://www.buymeacoffee.com/PE0y8DF"><img src="~/img/misc/buymeacoffee.jpg" alt="Buy me a coffee" width="12%"></a> :-).</small>
+        </div>
+    </div>
+    <div class="card">
+        <div class="pull-left" style="padding-right: 5px;">
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">
+                <img alt="Creative Commons License" class="img-fluid img-thumbnail" src="https://i.creativecommons.org/l/by-sa/3.0/de/88x31.png" />
+            </a>
+        </div>
+        <div class="card-text">
+            <small>
+                This work by <a xmlns:cc="https://creativecommons.org/ns#" href="https://saschamanns.de"
+                                property="cc:attributionName" rel="cc:attributionURL">Sascha Manns</a> is
+                licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">
+                    Attribution-ShareAlike 3.0 Germany License (CC BY-SA 3.0 DE)
+                </a>. Based on a work at <a xmlns:dct="https://purl.org/dc/terms/" href="https://saschamanns.de"
+                                            rel="dct:source">saschamanns.de</a>.
+            </small>
+        </div>
+    </div>
+    <hr />
+    <div class="ad-container">
+        @ads.InlineAdd()
+    </div>
+    <hr />
+    <div id="disqus_thread"></div>
+</div>
+@section Styles {
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-coy.min.css" />
+    @*<link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shCore.css" />
+        <link rel="stylesheet" type="text/css" href="~/3rdparty/css/sh/shThemeDefault.css" />*@
+}
+@section Scripts {
+    <script>
+    var disqus_config = function () {
+      this.page.url = "@("https://wildermuth.com/" + Model.GetStoryUrl())";
+      this.page.identifier = "@Model.UniqueId";
+    };
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//@(config["Disqus:BlogName"]).disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/autoloader/prism-autoloader.min.js"></script>
+}

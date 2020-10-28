@@ -1,0 +1,19 @@
+﻿@{
+    var ctrl = (string)ViewContext.RouteData.Values["controller"];
+    var action = (string)ViewContext.RouteData.Values["action"];
+    var isCurrent = new Func<string, string, string>((c, a) =>
+    {
+        if ((string.IsNullOrWhiteSpace(a) && c == ctrl) || (c == ctrl && a == action)) return "active";
+        return "";
+    });
+}
+<li class="nav-item"><a class="nav-link @isCurrent("Root", "Index")" asp-controller="Root" asp-action="Index" style="color: #eee">Home</a></li>
+<li class="nav-item"><a class="nav-link @isCurrent("Root", "About")" asp-controller="Root" asp-action="About" style="color: #eee">About me</a></li>
+<li class="nav-item"><a class="nav-link @isCurrent("Root", "CurriculumVitae")" asp-controller="Root" asp-action="CurriculumVitae" style="color: #eee">Curriculum vitae</a></li>
+<li class="nav-item"><a class="nav-link @isCurrent("Root", "Testimonials")" asp-controller="Root" asp-action="Testimonials" style="color: #eee">Testimonials</a></li>
+<!--<li class="nav-item"><a class="nav-link @isCurrent("Videos", "")" asp-controller="Videos" asp-action="Index" style="color: #eee">Videos</a></li>-->
+<li class="nav-item"><a class="nav-link @isCurrent("Talks", "")" asp-controller="Talks" asp-action="Index" style="color: #eee">Talks</a></li>
+<li class="nav-item"><a class="nav-link @isCurrent("Root", "Imprint")" asp-controller="Root" asp-action="Imprint" style="color: #eee">Imprint</a></li>
+<li class="nav-item"><a class="nav-link @isCurrent("Root", "Privacy")" asp-controller="Root" asp-action="Privacy" style="color: #eee">Privacy</a></li>
+<li class="nav-item"><a class="nav-link @isCurrent("Search", "")" asp-controller="Search" asp-action="Index" style="color: #eee">Search</a></li>
+<!--<li class="nav-item"><a class="nav-link @isCurrent("Root", "Contact")" asp-controller="Root" asp-action="Contact">Contact</a></li>-->
