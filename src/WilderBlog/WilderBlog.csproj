@@ -12,6 +12,7 @@
     <Version>4.1.13</Version>
     <AssemblyVersion>4.1.13.0</AssemblyVersion>
     <FileVersion>4.1.13.0</FileVersion>
+    <AllowUntrustedCertificate>True</AllowUntrustedCertificate>
   </PropertyGroup>
 
   <ItemGroup>

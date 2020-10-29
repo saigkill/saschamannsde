@@ -238,3 +238,4 @@ typings
 src/WilderBlog/package-lock.json
 /src/test.json
 /src/WilderBlog/config.Production.json
+/src/WilderBlog.Data/WilderInitializer.cs
