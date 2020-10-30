@@ -1,0 +1,83 @@
+﻿[
+  {
+    "id": "1",
+    "jobtitle": "Kaufmann im Einzelhandel",
+    "company": "Auto Deschner Gmbh",
+    "years": "08/1998-07/2000",
+    "tasks": "Allgemeine kaufmännische Tätigkeiten",
+    "stack": "Unix, BASIC",
+    "link" : ""
+  },
+  {
+    "id": "2",
+    "jobtitle": "Ersatzdienst zum Zivildienst",
+    "company": "Orden der Vollzeitdiener der ZJ",
+    "years": "07/2000-06/2007",
+    "tasks": "Linux-Verfügbarmachung der eigenen Bibelsoftware, Betatesting",
+    "stack": "Windows, Linux",
+    "link" : ""
+  },
+  {
+    "id": "3",
+    "jobtitle": "Softwareentwickler/Teamleiter",
+    "company": "openSUSE Linux Project",
+    "years": "07/2007-12/2014",
+    "tasks": "Teamleitung Newsletter, Packaging, Buildservice, Marketing Team",
+    "stack": "Linux, Shell (Bash), Make",
+    "link": ""
+  },
+  {
+    "id": "4",
+    "jobtitle": "Community & Support Agent",
+    "company": "open-slx GmbH",
+    "years": "08/2010-06/2013",
+    "tasks": "Level 1 Support, Projektletung deutsches openSUSE Wiki, Dokumentation",
+    "stack": "Linux, DocBook, Shell (Bash), Make",
+    "link": "img/cv/Certificates_of_Employment/1_openslx_compressed.pdf"
+  },
+  {
+    "id": "5",
+    "jobtitle": "Buchautor",
+    "company": "Lulu Press Inc.",
+    "years": "07/2013-01/2014",
+    "tasks": "Schreiben des Handbuchs, Mentor in Google CodeIn",
+    "stack": "Linux, DocBook",
+    "link": ""
+  },
+  {
+    "id": "6",
+    "jobtitle": "IT-Supporter/Dispatcher",
+    "company": "Hays Temp GmbH",
+    "years": "02/2014-05/2014",
+    "tasks": "Dispatching, Teamcontrolling, Benutzer & Rechteverwaltung",
+    "stack": "Windows, SAP Amsys IDM, Active Directory",
+    "link": "img/cv/Certificates_of_Employment/3_haysnew_compressed.pdf"
+  },
+  {
+    "id": "7",
+    "jobtitle": "Autor Geschäftsprozessdokumentation",
+    "company": "XCOM AG (jetzt Fintech Group)",
+    "years": "09/2014-09/2015",
+    "tasks": "Dokumentation Software & Bankwesen, Modellierung von Geschäftsprozessen",
+    "stack": "XML, DocBook, Ruby, Linux, C#",
+    "link": "img/cv/Certificates_of_Employment/4_xcom_compressed.pdf"
+  },
+  {
+    "id": "8",
+    "jobtitle": "App & Web Developer",
+    "company": "CPS solutions GmbH",
+    "years": "03/2018-12/2019",
+    "tasks": "Konzeption & Programmierung mobiler Anwendungen, Belegerstellung, 2nd-Level Support, Webseitenerstellung",
+    "stack": "JavaScript, PHP, Wordpress, Windows, MS-SQL, MYSQL",
+    "link": "img/cv/Certificates_of_Employment/5_cps_compressed.pdf"
+  },
+  {
+    "id": "9",
+    "jobtitle": "Softwareentwickler",
+    "company": "Logis Softwareentwicklung GmbH",
+    "years": "03/2020-08/2020",
+    "tasks": "Konzeption & Programmierung, Belegerstellung, Datenbankentwicklung",
+    "stack": "C#, Visual Basic 6, Cachè Datenbank, Windows",
+    "link": "img/cv/Certificates_of_Employment/6_logis_compressed.pdf"
+  }
+]

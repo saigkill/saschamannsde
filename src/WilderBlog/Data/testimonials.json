@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "1",
     "link": "https://www.linkedin.com/in/saigkill/",
@@ -31,5 +31,16 @@
     "relationship": "worked in Saschas Project",
     "imagePath": "https://media.licdn.com/dms/image/C4D03AQEl76UI24Arng/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=9aGQs1QeOIw2Sx0Ejju2blqS29u92tSN548EMtArphk",
     "date": "2019-04-25"
+  },
+  {
+    "id": "4",
+    "link": "",
+    "blurp": "So eine Kündigung trifft einen hart. Denke, wir verlieren dadurch einen sehr sympathischen und vertrauensvollen Kollegen. Deine Hilfe wird jetzt definitiv fehlen, aber du bist ein super Typ und wirst bestimmt etwas anderes und vor allem besseres finden.",
+    "recommender": "Falk König",
+    "recommenderJob": "Mitarbeiter Logis GmbH",
+    "recommenderLocation": "Andernach, Germany",
+    "relationship": "Kollege",
+    "imagePath": "",
+    "date": "2020-09-25"
   }
 ]
