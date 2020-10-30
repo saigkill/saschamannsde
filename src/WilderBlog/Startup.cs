@@ -71,6 +71,9 @@ namespace WilderBlog
             svcs.AddScoped<PublicationsProvider>();
             svcs.AddScoped<TalksProvider>();
             svcs.AddScoped<VideosProvider>();
+            svcs.AddScoped<JobsProvider>();
+            svcs.AddScoped<CertsProvider>();
+            svcs.AddScoped<TestimonialsProvider>();
             svcs.AddTransient<IImageStorageService, ImageStorageService>();
 
             // Supporting Live Writer (MetaWeblogAPI)

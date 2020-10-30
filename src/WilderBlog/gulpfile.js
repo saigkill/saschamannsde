@@ -25,6 +25,12 @@ var deps = {
     "jquery": {
         "dist/*": ""
     },
+    "ajaxchimp": {
+        "*": ""
+    },
+    "animsition": {
+        "dist/*": ""
+    },
     "bootstrap": {
         "dist/**/*": ""
     },
@@ -38,11 +44,26 @@ var deps = {
         "*.js": "",
         "styles/*": "styles"
     },
+    "jarallax": {        
+        "dist/*": ""
+    },
+    "jquery-validation": {
+        "dist/*": ""
+    },
     "lodash": {
         "lodash*.*": ""
     },
+    "magnific-popup": {
+        "dist/*": ""
+    },
     "owl-carousel": {
         "owl-carousel/**": ""
+    },
+    "owl.carousel": {
+        "dist/**": ""
+    },
+    "pagepiling.js": {
+        "dist/*": ""
     },
     "popper.js": {
         "dist/*": ""
