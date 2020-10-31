@@ -13,6 +13,7 @@
     <AssemblyVersion>4.1.13.0</AssemblyVersion>
     <FileVersion>4.1.13.0</FileVersion>
     <AllowUntrustedCertificate>True</AllowUntrustedCertificate>
+    <UserSecretsId>ef6c3cab-e0ef-431e-beaf-14f9de5ad4e1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

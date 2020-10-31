@@ -5,25 +5,27 @@
     ViewBag.PageImage = "/img/headers/customer-testimonials-hero.jpg";
 }
 @inject IConfiguration config
+@inject WilderBlog.Services.DataProviders.TestimonialsProvider tests
 @section styles {
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/owl-carousel/owl.carousel.css" />
-        <link rel="stylesheet" href="~/lib/owl-carousel/owl.theme.css" />
+        <link rel="stylesheet" href="~/lib/owl.carousel/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="~/lib/owl.carousel/assets/owl.theme.default.css" />
         <link rel="stylesheet" href="~/css/Testimonials.css" />
     </environment>
     <environment names="Production,Staging">
-        <link rel="stylesheet" href="~/lib/owl-carousel/owl.carousel.css" />
-        <link rel="stylesheet" href="~/lib/owl-carousel/owl.theme.css" />
+        <link rel="stylesheet" href="~/lib/owl.carousel/assets/owl.carousel.css" />
+        <link rel="stylesheet" href="~/lib/owl.carousel/assets/owl.theme.css" />
         <link rel="stylesheet" href="~/css/Testimonials.css" />
     </environment>
 }
 @section scripts {
     <environment names="Development">
-        <script src="~/lib/owl-carousel/owl.carousel.js"></script>
+        <script src="~/lib/owl.carousel/owl.carousel.js"></script>
         <script src="~/js/Testimonials.js"></script>
     </environment>
     <environment names="Production,Staging">
-        <script src="~/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="~/lib/owl.carousel/owl.carousel.min.js"></script>
+        <script src="~/js/Testimonials.js"></script>
     </environment>
 
 }
@@ -33,45 +35,22 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
-            <div id="testimonial-slider" class="owl-carousel">
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="~/img/testimonials/satoru.jpg" alt="">
+            <div id="testimonial-slider" class="carousel-project owl-carousel">
+                @foreach (var testimonial in tests.Get())
+                {
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="@testimonial.ImagePath" alt="">
+                        </div>
+                        <p class="description">
+                            @testimonial.Blurp
+                        </p>
+                        <h3 class="title">
+                            @testimonial.Recommender
+                            <span class="post"> - @testimonial.RecommenderJob, @testimonial.RecommenderLocation</span>
+                        </h3>
                     </div>
-                    <p class="description">
-                        Sascha is one of the most active and enthusiastic members of openSUSE Marketing Team and the Second Chief-Editor of openSUSE Weekly News. I love so much working with him. ;-)
-                    </p>
-                    <h3 class="title">
-                        Satoru Matsumoto
-                        <span class="post"> - Member at openSUSE Project, Tokyo, Japan</span>
-                    </h3>
-                </div>
-
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="~/img/testimonials/andreas.jpg" alt="">
-                    </div>
-                    <p class="description">
-                        Sascha is currently the main driving force behind the openSUSE Weekly news letter. He works together with different community members world wide to create the newsletter. During his time as editor and due to his efforts, the weekly news team has grown and the news letter gets translated in more than a dozen languages. I appreciate the enthusiasm Sascha shows for openSUSE marketing in general and for the news letter especially.
-                    </p>
-                    <h3 class="title">
-                        Andreas Jaeger
-                        <span class="post"> - Productmanager at SUSE, Nurnberg, Germany</span>
-                    </h3>
-                </div>
-
-                <div class="testimonial">
-                    <div class="pic">
-                        <img src="~/img/testimonials/alpvonkri.jpg" alt="">
-                    </div>
-                    <p class="description">
-                        Sascha is an excellent leader and a very skilled one.
-                    </p>
-                    <h3 class="title">
-                        Marco Antonio Flores
-                        <span class="post"> - Computer Systems Engineer, Polanco, Mexico</span>
-                    </h3>
-                </div>
+                }
             </div>
         </div>
     </div>

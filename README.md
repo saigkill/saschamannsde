@@ -1,4 +1,4 @@
-# WilderBlog
+# MannsBlog
 
 I re-wrote my blog using a new stack of web technologies including:
 
@@ -12,7 +12,9 @@ The project wasn't build to be a blog engine or a easy to re-use for your own bl
 
 The current project is built with many pre-release technologies so that the code-base will change a lot as these technologies get closer to release. 
 
-See my blog entry (and the live site) for more information on how and why I built it:
+This project bases on Shawn Wildermuths WilderBlog.
+
+See his blog entry (and the live site) for more information on how and why he built it:
 
 - http://wildermuth.com/2016/04/14/Welcome-to-the-New-Wildermuth-com
 

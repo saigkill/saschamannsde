@@ -55,10 +55,7 @@ var deps = {
     },
     "magnific-popup": {
         "dist/*": ""
-    },
-    "owl-carousel": {
-        "owl-carousel/**": ""
-    },
+    },    
     "owl.carousel": {
         "dist/**": ""
     },
