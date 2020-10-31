@@ -7,7 +7,7 @@
     "recommenderJob": "Member of the openSUSE Project",
     "recommenderLocation": "Tokyo, Japan",
     "relationship": "working in the same project",
-    "imagePath": "https://media.licdn.com/dms/image/C5603AQF7YjAOkO_flg/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=hFDjKw967SCs1l8laP_TyfjxbWwiV4h1T2qMtc7O-Mw",
+    "imagePath": "img/testimonials/satoru.jpg",
     "date": "2009-12-04"
   },
   {
@@ -18,7 +18,7 @@
     "recommenderJob": "Product Manager at SUSE",
     "recommenderLocation": "Nuernberg, Germany",
     "relationship": "working in the same project",
-    "imagePath": "https://media.licdn.com/dms/image/C5103AQHA_20s0QmHZA/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=1GJwFzeZ23mb_CNM9v48fvHjdsaAHCA1aG2IHkuoFPc",
+    "imagePath": "img/testimonials/andreas.jpg",
     "date": "2010-02-04"
   },
   {
@@ -29,7 +29,7 @@
     "recommenderJob": "Computer Systems Engineer",
     "recommenderLocation": "Polanco I Seccion, Mexico City, Mexico",
     "relationship": "worked in Saschas Project",
-    "imagePath": "https://media.licdn.com/dms/image/C4D03AQEl76UI24Arng/profile-displayphoto-shrink_800_800/0?e=1564012800&v=beta&t=9aGQs1QeOIw2Sx0Ejju2blqS29u92tSN548EMtArphk",
+    "imagePath": "img/testimonials/alpvonkri.jpg",
     "date": "2019-04-25"
   },
   {
@@ -40,7 +40,7 @@
     "recommenderJob": "Mitarbeiter Logis GmbH",
     "recommenderLocation": "Andernach, Germany",
     "relationship": "Kollege",
-    "imagePath": "",
+    "imagePath": "img/testimonials/FalkKoenig.jpg",
     "date": "2020-09-25"
   }
 ]
