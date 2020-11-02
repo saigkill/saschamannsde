@@ -18,3 +18,4 @@ See his blog entry (and the live site) for more information on how and why he bu
 
 - http://wildermuth.com/2016/04/14/Welcome-to-the-New-Wildermuth-com
 
+Last sync: 02.11.2020 - 2d8e1ca09e4e61fc699f8ccc68aced9927bd8b30
