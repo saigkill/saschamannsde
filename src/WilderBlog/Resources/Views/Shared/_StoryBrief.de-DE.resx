@@ -120,4 +120,7 @@
   <data name="comments" xml:space="preserve">
     <value>Keine Kommentare</value>
   </data>
+  <data name="xing-lang" xml:space="preserve">
+    <value>data-lang="de"</value>
+  </data>
 </root>

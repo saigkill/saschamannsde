@@ -100,4 +100,7 @@
   <data name="comments" xml:space="preserve">
     <value>No Comments</value>
   </data>
+  <data name="xing-lang" xml:space="preserve">
+    <value></value>
+  </data>
 </root>
