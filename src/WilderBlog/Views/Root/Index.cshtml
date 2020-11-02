@@ -1,9 +1,11 @@
-﻿@inject WilderBlog.Services.DataProviders.CalendarProvider appearances
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject WilderBlog.Services.DataProviders.CalendarProvider appearances
+@inject IViewLocalizer Localizer
 @model BlogResult
 @{
     ViewBag.Title = "Sascha Manns's Twilight Zone";
     ViewBag.PageName = "Sascha Manns";
-    ViewBag.PageBlurb = "My thoughts about technology, programming, everything else...";
+    ViewBag.PageBlurb = Localizer["viewbag-pageblurp"];
     ViewBag.PageImage = "/img/headers/code2.jpg";
     ViewBag.ControllerName = "Root";
 }

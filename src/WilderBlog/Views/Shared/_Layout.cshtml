@@ -1,4 +1,6 @@
-﻿@inject Microsoft.Extensions.Configuration.IConfiguration config
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@inject Microsoft.Extensions.Configuration.IConfiguration config
 @inject WilderBlog.Services.AdService ads
 @*@inject CoursesProvider courses*@
 @{
@@ -25,7 +27,7 @@
     <meta itemprop="author" name='author' content='Sascha Manns' />
     <meta name='designer' content='Sascha Manns' />
     <meta name='contact' content='Sascha.Manns@@outlook.de' />
-    <meta itemprop="copyrightHolder" name='copyright' content='Copyright (c) 2017 - @DateTime.Now.Year by Sascha Manns - All rights Reserved.' />
+    <meta itemprop="copyrightHolder" name='copyright' content='Copyright (c) 2017 - @DateTime.Now.Year @Localizer["copyright"]' />
     <meta itemprop="copyrightYear" content="@DateTime.Now.Year" />
     <meta name="Distribution" content="global" />
     <meta itemprop="inLanguage" name="language" content="German, English" />
@@ -134,6 +136,7 @@
             </ul>
         </div>
     </nav>
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     @if (ViewBag.PageImage != null && !string.IsNullOrWhiteSpace(ViewBag.PageImage))
@@ -282,9 +285,12 @@
                         </li>
                     </ul>
                     <p itemprop="copyrightHolder" class="copyright text-muted">Copyright &copy; Sascha Manns 2017-@DateTime.UtcNow.Year</p>
-                    <p>The content of this Blog can reused under the rules of the <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"><img src="~/img/supporters/Logo_CC_by_SA.png" width="75" height="26" /></a></p>
+                    <div>
+                        @await Html.PartialAsync("_SelectedLanguagePartial")
+                    </div>
+                    <p>@Localizer["content"] <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"><img src="~/img/supporters/Logo_CC_by_SA.png" width="75" height="26" /></a></p>
                     <p class="copyright text-primary">
-                        Built with <a href="https://get.asp.net" target="_blank">ASP.NET Core 3.1</a>, MVC 6, <a href="https://vuejs.org" target="_blank">Vue</a>, <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap" target="_blank">Entity Framework Core 3.1</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a>, and Hosted on <a href="https://www.iis.net/" target="_blank">IIS</a>.<br /> <a href="https://github.com/saigkill/saschamannsde" target="_blank">Get the Sourcecode of that blog!</a> <br />
+                        @Localizer["built"] <a href="https://get.asp.net" target="_blank">ASP.NET Core 3.1</a>, MVC 6, <a href="https://vuejs.org" target="_blank">Vue</a>, <a href="https://github.com/aspnet/EntityFramework/wiki/Roadmap" target="_blank">Entity Framework Core 3.1</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a>, @Localizer["host"] <a href="https://www.iis.net/" target="_blank">IIS</a>.<br /> <a class="btn" href="https://github.com/saigkill/saschamannsde" target="_blank">@Localizer["sourcecode"]</a> <br />
                     </p>
 
                 </div>

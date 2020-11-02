@@ -1,504 +1,226 @@
-﻿@{
-    ViewBag.Title = "Data Privacy - Sascha Manns's Twilight Zone";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewBag.Title = Localizer["viewbag-title"];
     ViewBag.PageName = "Data Privacy";
     ViewBag.PageBlurb = "";
     ViewBag.PageImage = "/img/headers/privacy.jpg";
 }
-
-<p>This Statement begins with the german Version. You can find the english Version below.</p>
-
-<h2>Datenschutz <img src="~/img/flags/german.png" alt="German Flag" class="img-responsive" width="30" height="30" /></h2>
-
-<h2>Datenschutzerklärung</h2>
-<h3 id="dsg-general-intro"></h3>
-<p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) im Rahmen der Erbringung unserer Leistungen sowie innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).</p>
-<h3 id="dsg-general-controller">Verantwortlicher</h3>
-<div itemscope itemtype="https://schema.org/Person">
-    <p>
-        <address>
-            <span itemprop="name">Sascha Manns</span>
-            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress">
-                    Maifeldstraße 10 <br />
-                    <span itemprop="postalCode">56727</span> Mayen
-                </span><br />
-                Germany
-            </div>
-        </address>
-        <span itemprop="telephone">Telefon: +49-172-3142738</span><br />
-        <a href="mailto:Sascha.Manns@@outlook.de" itemprop="email">
-            Sascha.Manns@@outlook.de
-        </a>
-    </p>
-</div>
-<h3 id="dsg-general-datatype">Arten der verarbeiteten Daten</h3>
-<p>
-    <ul>
-        <li>Inhaltsdaten (z.B., Texteingaben, Fotografien, Videos)</li>
-        <li>Nutzungsdaten (z.B., besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten)</li>
-        <li>Meta-/Kommunikationsdaten (z.B., Geräte-Informationen, IP-Adressen)</li>
-    </ul>
-</p>
-<h3 id="dsg-general-datasubjects">Kategorien betroffener Personen</h3>
-<p>Besucher und Nutzer des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer“).<br></p>
-<h3 id="dsg-general-purpose">Zweck der Verarbeitung</h3>
-<p>
-    <ul>
-        <li>Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte</li>
-        <li>Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.</li>
-        <li>Sicherheitsmaßnahmen</li>
-        <li>Reichweitenmessung</li>
-    </ul>
-    <span class="tsmcom"></span>
-</p>
-<h3 id="dsg-general-terms">Verwendete Begrifflichkeiten </h3>
-<p>
-    <ul>
-        <li><strong>"Personenbezogene Daten"</strong> sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind.</li>
-        <li><strong>„Verarbeitung“</strong> ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten.</li>
-        <li><strong>„Pseudonymisierung“</strong> die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können, sofern diese zusätzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren natürlichen Person zugewiesen werden.</li>
-        <li><strong>„Profiling“</strong> jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf eine natürliche Person beziehen, zu bewerten, insbesondere um Aspekte bezüglich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönliche Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen.</li>
-        <li>Als <strong>„Verantwortlicher“</strong> wird die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet, bezeichnet.</li>
-        <li><strong>„Auftragsverarbeiter“</strong> eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</li>
-    </ul>
-</p>
-<h3 id="dsg-general-legalbasis">Maßgebliche Rechtsgrundlagen</h3>
-<p>
-    Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer Datenverarbeitungen mit. Für Nutzer aus dem Geltungsbereich der Datenschutzgrundverordnung (DSGVO), d.h. der EU und des EWG gilt, sofern die Rechtsgrundlage in der Datenschutzerklärung nicht genannt wird, Folgendes:
-    <ul>
-        <li>Die Rechtsgrundlage für die Einholung von Einwilligungen ist Art. 6 Abs. 1 lit. a und Art. 7 DSGVO;</li>
-        <li>Die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer Leistungen und Durchführung vertraglicher Maßnahmen sowie Beantwortung von Anfragen ist Art. 6 Abs. 1 lit. b DSGVO;</li>
-        <li>Die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer rechtlichen Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO;</li>
-        <li>Für den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.</li>
-        <li>Die Rechtsgrundlage für die erforderliche Verarbeitung zur Wahrnehmung einer Aufgabe, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die dem Verantwortlichen übertragen wurde ist Art. 6 Abs. 1 lit. e DSGVO.</li>
-        <li>Die Rechtsgrundlage für die Verarbeitung zur Wahrung unserer berechtigten Interessen ist Art. 6 Abs. 1 lit. f DSGVO.</li>
-        <li>Die Verarbeitung von Daten zu anderen Zwecken als denen, zu denen sie ehoben wurden, bestimmt sich nach den Vorgaben des Art 6 Abs. 4 DSGVO.</li>
-        <li>Die Verarbeitung von besonderen Kategorien von Daten (entsprechend Art. 9 Abs. 1 DSGVO) bestimmt sich nach den Vorgaben des Art. 9 Abs. 2 DSGVO.</li>
-    </ul>
-</p>
-<h3 id="dsg-general-securitymeasures">Sicherheitsmaßnahmen</h3>
-<p>
-    Wir treffen nach Maßgabe der gesetzlichen Vorgabenunter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und Freiheiten natürlicher Personen, geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.<br><br> Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen Zugangs zu den Daten, als auch des sie betreffenden Zugriffs, der Eingabe, Weitergabe, der Sicherung der Verfügbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung von Betroffenenrechten, Löschung von Daten und Reaktion auf Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz personenbezogener Daten bereits bei der Entwicklung, bzw. Auswahl von Hardware, Software sowie Verfahren, entsprechend dem Prinzip des Datenschutzes durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen.<br>
-</p>
-<h3 id="dsg-general-coprocessing">Zusammenarbeit mit Auftragsverarbeitern, gemeinsam Verantwortlichen und Dritten</h3>
-<p>
-    Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen Personen und Unternehmen (Auftragsverarbeitern, gemeinsam Verantwortlichen oder Dritten) offenbaren, sie an diese übermitteln oder ihnen sonst Zugriff auf die Daten gewähren, erfolgt dies nur auf Grundlage einer gesetzlichen Erlaubnis (z.B. wenn eine Übermittlung der Daten an Dritte, wie an Zahlungsdienstleister, zur Vertragserfüllung erforderlich ist), Nutzer eingewilligt haben, eine rechtliche Verpflichtung dies vorsieht oder auf Grundlage unserer berechtigten Interessen (z.B. beim Einsatz von Beauftragten, Webhostern, etc.). <br><br> Sofern wir Daten anderen Unternehmen unserer Unternehmensgruppe offenbaren, übermitteln oder ihnen sonst den Zugriff gewähren, erfolgt dies insbesondere zu administrativen Zwecken als berechtigtes Interesse und darüberhinausgehend auf einer dengesetzlichen Vorgaben entsprechenden Grundlage. <br>
-</p>
-<h3 id="dsg-general-thirdparty">Übermittlungen in Drittländer</h3>
-<p>Sofern wir Daten in einem Drittland (d.h. außerhalb der Europäischen Union (EU), des Europäischen Wirtschaftsraums (EWR) oder der Schweizer Eidgenossenschaft) verarbeiten oder dies im Rahmen der Inanspruchnahme von Diensten Dritter oder Offenlegung, bzw. Übermittlung von Daten an andere Personen oder Unternehmen geschieht, erfolgt dies nur, wenn es zur Erfüllung unserer (vor)vertraglichen Pflichten, auf Grundlage Ihrer Einwilligung, aufgrund einer rechtlichen Verpflichtung oder auf Grundlage unserer berechtigten Interessen geschieht. Vorbehaltlich gesetzlicher oder vertraglicher Erlaubnisse, verarbeiten oder lassen wir die Daten in einem Drittland nur beim Vorliegen der gesetzlichen Voraussetzungen. D.h. die Verarbeitung erfolgt z.B. auf Grundlage besonderer Garantien, wie der offiziell anerkannten Feststellung eines der EU entsprechenden Datenschutzniveaus (z.B. für die USA durch das „Privacy Shield“) oder Beachtung offiziell anerkannter spezieller vertraglicher Verpflichtungen.</p>
-<h3 id="dsg-general-rightssubject">Rechte der betroffenen Personen</h3>
-<ul>
-    <li>Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend den gesetzlichen Vorgaben.</li>
-    <li>Sie haben entsprechend. den gesetzlichen Vorgaben das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen.</li>
-    <li>Sie haben nach Maßgabe der gesetzlichen Vorgaben das Recht zu verlangen, dass betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe der gesetzlichen Vorgaben eine Einschränkung der Verarbeitung der Daten zu verlangen.</li>
-    <li>Sie haben das Recht zu verlangen, dass die Sie betreffenden Daten, die Sie uns bereitgestellt haben nach Maßgabe der gesetzlichen Vorgaben zu erhalten und deren Übermittlung an andere Verantwortliche zu fordern.</li>
-    <li>Sie haben ferner nach Maßgabe der gesetzlichen Vorgaben das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.</li>
+<h1>@Localizer["viewbag-pagename"]</h1>
+<h2>@Localizer["introduction"]</h2>
+<p>@Localizer["introduction-blurp"]</p>
+<p>@Localizer["introduction-gender"]</p>
+<p>@Localizer["introduction-status"] 31. Oktober 2020</p>
+<h2>@Localizer["toc-overview"]</h2>
+<ul class="index">
+    <li><a class="index-link" href="#m14">@Localizer["introduction"]</a></li>
+    <li><a class="index-link" href="#m3">@Localizer["toc-responsible"]</a></li>
+    <li><a class="index-link" href="#mOverview">@Localizer["toc-processing"]</a></li>
+    <li><a class="index-link" href="#m13">@Localizer["toc-legal-bases"]</a></li>
+    <li><a class="index-link" href="#m27">@Localizer["toc-safety"]</a></li>
+    <li><a class="index-link" href="#m134">@Localizer["toc-cookies"]</a></li>
+    <li><a class="index-link" href="#m104">@Localizer["toc-blogs"]</a></li>
+    <li><a class="index-link" href="#m182">@Localizer["toc-contact"]</a></li>
+    <li><a class="index-link" href="#m263">@Localizer["toc-analytics"]</a></li>
+    <li><a class="index-link" href="#m264">@Localizer["toc-onlinemarketing"]</a></li>
+    <li><a class="index-link" href="#m136">@Localizer["toc-onlinemedia"]</a></li>
+    <li><a class="index-link" href="#m328">@Localizer["toc-plugins"]</a></li>
+    <li><a class="index-link" href="#m12">@Localizer["toc-deletedata"]</a></li>
+    <li><a class="index-link" href="#m15">@Localizer["toc-update"]</a></li>
+    <li><a class="index-link" href="#m10">@Localizer["toc-rights"]</a></li>
+    <li><a class="index-link" href="#m42">@Localizer["toc-definitions"]</a></li>
 </ul>
-<h3 id="dsg-general-revokeconsent">Widerrufsrecht</h3>
-<p>Sie haben das Recht, erteilte Einwilligungen mit Wirkung für die Zukunft zu widerrufen.</p>
-<h3 id="dsg-general-object">Widerspruchsrecht</h3>
-<p><strong>Sie können der künftigen Verarbeitung der Sie betreffenden Daten nach Maßgabe der gesetzlichen Vorgaben jederzeit widersprechen. Der Widerspruch kann insbesondere gegen die Verarbeitung für Zwecke der Direktwerbung erfolgen.</strong></p>
-<h3 id="dsg-general-cookies">Cookies und Widerspruchsrecht bei Direktwerbung</h3>
-<p>
-    Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer gespeichert werden. Innerhalb der Cookies können unterschiedliche Angaben gespeichert werden. Ein Cookie dient primär dazu, die Angaben zu einem Nutzer (bzw. dem Gerät auf dem
-    das Cookie gespeichert ist) während oder auch nach seinem Besuch innerhalb eines Onlineangebotes zu speichern. Als temporäre Cookies, bzw. „Session-Cookies“ oder „transiente Cookies“, werden Cookies bezeichnet, die gelöscht werden, nachdem ein Nutzer
-    ein Onlineangebot verlässt und seinen Browser schließt. In einem solchen Cookie kann z.B. der Inhalt eines Warenkorbs in einem Onlineshop oder ein Login-Status gespeichert werden. Als „permanent“ oder „persistent“ werden Cookies bezeichnet, die auch
-    nach dem Schließen des Browsers gespeichert bleiben. So kann z.B. der Login-Status gespeichert werden, wenn die Nutzer diese nach mehreren Tagen aufsuchen. Ebenso können in einem solchen Cookie die Interessen der Nutzer gespeichert werden, die für
-    Reichweitenmessung oder Marketingzwecke verwendet werden. Als „Third-Party-Cookie“ werden Cookies bezeichnet, die von anderen Anbietern als dem Verantwortlichen, der das Onlineangebot betreibt, angeboten werden (andernfalls, wenn es nur dessen Cookies
-    sind spricht man von „First-Party Cookies“).<br>
-    <br> Wir können temporäre und permanente Cookies einsetzen und klären hierüber im Rahmen unserer Datenschutzerklärung auf.<br>
-    <br> Falls die Nutzer nicht möchten, dass Cookies auf ihrem Rechner gespeichert werden, werden sie gebeten die entsprechende Option in den Systemeinstellungen ihres Browsers zu deaktivieren. Gespeicherte Cookies können in den Systemeinstellungen des
-    Browsers gelöscht werden. Der Ausschluss von Cookies kann zu Funktionseinschränkungen dieses Onlineangebotes führen.<br>
-    <br> Ein genereller Widerspruch gegen den Einsatz der zu Zwecken des Onlinemarketing eingesetzten Cookies kann bei einer Vielzahl der Dienste, vor allem im Fall des Trackings, über die US-amerikanische Seite <a href="https://www.aboutads.info/choices/">https://www.aboutads.info/choices/</a>    oder die EU-Seite <a href="https://www.youronlinechoices.com/">https://www.youronlinechoices.com/</a> erklärt werden. Des Weiteren kann die Speicherung von Cookies mittels deren Abschaltung in den Einstellungen des Browsers erreicht werden. Bitte beachten
-    Sie, dass dann gegebenenfalls nicht alle Funktionen dieses Onlineangebotes genutzt werden können.
-</p>
-<h3 id="dsg-general-erasure">Löschung von Daten</h3>
-<p>
-    Die von uns verarbeiteten Daten werden nach Maßgabe der gesetzlichen Vorgaben gelöscht oder in ihrer Verarbeitung eingeschränkt. Sofern nicht im Rahmen dieser Datenschutzerklärung ausdrücklich angegeben, werden die bei uns gespeicherten Daten gelöscht,
-    sobald sie für ihre Zweckbestimmung nicht mehr erforderlich sind und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen. <br>
-    <br> Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird deren Verarbeitung eingeschränkt. D.h. die Daten werden gesperrt und nicht für andere Zwecke verarbeitet. Das gilt z.B. für Daten,
-    die aus handels- oder steuerrechtlichen Gründen aufbewahrt werden müssen.
-</p>
-<h3 id="dsg-general-changes">Änderungen und Aktualisierungen der Datenschutzerklärung</h3>
-<p>
-    Wir bitten Sie sich regelmäßig über den Inhalt unserer Datenschutzerklärung zu informieren. Wir passen die Datenschutzerklärung an, sobald die Änderungen der von uns durchgeführten Datenverarbeitungen dies erforderlich machen. Wir informieren Sie, sobald
-    durch die Änderungen eine Mitwirkungshandlung Ihrerseits (z.B. Einwilligung) oder eine sonstige individuelle Benachrichtigung erforderlich wird.
-</p>
-<p></p>
-<h3 id="dsg-disqus">DISQUS-Kommentarfunktion</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        Wir setzen auf Grundlage unserer berechtigten Interessen an einer effizienten, sicheren und nutzerfreundlichen Kommentarverwaltung gem. Art. 6 Abs. 1 lit. f. DSGVO den Kommentardienst DISQUS, angeboten von der DISQUS, Inc., 301 Howard St, Floor 3 San Francisco, California- 94105, USA, ein. DISQUS ist unter dem Privacy-Shield-Abkommen zertifiziert und bietet hierdurch eine Garantie, das europäische Datenschutzrecht einzuhalten: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000TRkEAAW&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000TRkEAAW&amp;status=Active</a>.<br>
-        <br>
-        Zur Nutzung der DISQUS Kommentarfunktion können Nutzer sich über ein eigenes DISQUS-Nutzer-Konto oder einen bestehende Social-Media-Konten (z.B. OpenID, Facebook, Twitter oder Google) anmelden. Hierbei werden die Anmeldedaten der Nutzer durch DISQUS von den Plattformen bezogen. Es ist ebenfalls möglich, die DISQUS-Kommentarfunktion als Gast, ohne Erstellung oder Verwendung Nutzerkontos bei DISQUS oder einem der angegebenen Social-Media-Anbieter, zu nutzen.<br>
-        <br>
-        Wir betten lediglich DISQUS mit seinen Funktionen in unsere Website ein, wobei wir auf die Kommentare der Nutzer Einfluss nehmen können. Die Nutzer treten jedoch in eine unmittelbare Vertragsbeziehung mit DISQUS, in deren Rahmen DISQUS die Kommentare der Nutzer verarbeitet und ein Ansprechpartner für etwaige Löschung der Daten der Nutzer ist. Wir verweisen hierbei auf die Datenschutzerklärung von DISQUS: <a target="_blank" href="https://help.disqus.com/terms-and-policies/disqus-privacy-policy">https://help.disqus.com/terms-and-policies/disqus-privacy-policy</a> und weisen die Nutzer ebenfalls darauf hin, dass sie davon ausgehen können, dass DISQUS neben dem Kommentarinhalt auch deren IP-Adresse und den Zeitpunkt des Kommentars speichert sowie Cookies auf den Rechnern der Nutzer speichert und zur Darstellung von Werbung nutzen kann. Nutzer können jedoch der Verarbeitung ihrer Daten zwecks Darstellung von Anzeigen widersprechen: <a target="_blank" href="https://disqus.com/data-sharing-settings/">https://disqus.com/data-sharing-settings</a>. <br>
-    </span>
-</p>
-<p></p>
-<h3 id="dsg-comments">Kommentare und Beiträge</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        Wenn Nutzer Kommentare oder sonstige Beiträge hinterlassen, können ihre IP-Adressen auf Grundlage unserer berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO für 7 Tage gespeichert werden. Das erfolgt zu unserer Sicherheit, falls jemand in Kommentaren und Beiträgen widerrechtliche Inhalte hinterlässt (Beleidigungen, verbotene politische Propaganda, etc.). In diesem Fall können wir selbst für den Kommentar oder Beitrag belangt werden und sind daher an der Identität des Verfassers interessiert.<br>
-        <br>
-        Des Weiteren behalten wir uns vor, auf Grundlage unserer berechtigten Interessen gem. Art. 6 Abs. 1 lit. f. DSGVO, die Angaben der Nutzer zwecks Spamerkennung zu verarbeiten.<br>
-        <br>
-        Auf derselben Rechtsgrundlage behalten wir uns vor, im Fall von Umfragen die IP-Adressen der Nutzer für deren Dauer zu speichern und Cookies zu verwenden, um Mehrfachabstimmungen zu vermeiden.<br>
-        <br>
-        Die im Rahmen der Kommentare und Beiträge mitgeteilte Informationen zur Person, etwaige Kontakt- sowie Websiteinformationen als auch die inhaltlichen Angaben, werden von uns bis zum Widerspruch der Nutzer dauerhaft gespeichert.
-    </span>
-</p>
-<p></p>
-<h3 id="dsg-contact">Kontaktaufnahme</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        Bei der Kontaktaufnahme mit uns (z.B. per Kontaktformular, E-Mail, Telefon oder via sozialer Medien) werden die Angaben des Nutzers zur Bearbeitung der Kontaktanfrage und deren Abwicklung gem. Art. 6 Abs. 1 lit. b. (im Rahmen vertraglicher-/vorvertraglicher Beziehungen),  Art. 6 Abs. 1 lit. f. (andere Anfragen) DSGVO verarbeitet.. Die Angaben der Nutzer können in einem Customer-Relationship-Management System ("CRM System") oder vergleichbarer Anfragenorganisation gespeichert werden.<br>
-        <br>
-        Wir löschen die Anfragen, sofern diese nicht mehr erforderlich sind. Wir überprüfen die Erforderlichkeit alle zwei Jahre; Ferner gelten die gesetzlichen Archivierungspflichten.
-    </span>
-</p>
-<p></p>
-<h3 id="dsg-hostingprovider">Hosting und E-Mail-Versand</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        Die von uns in Anspruch genommenen Hosting-Leistungen dienen der Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und Plattformdienstleistungen, Rechenkapazität, Speicherplatz und Datenbankdienste, E-Mail-Versand, Sicherheitsleistungen sowie technische Wartungsleistungen, die wir zum Zwecke des Betriebs dieses Onlineangebotes einsetzen. <br>
-        <br>
-        Hierbei verarbeiten wir, bzw. unser Hostinganbieter Bestandsdaten, Kontaktdaten, Inhaltsdaten, Vertragsdaten, Nutzungsdaten, Meta- und Kommunikationsdaten von Kunden, Interessenten und Besuchern dieses Onlineangebotes auf Grundlage unserer berechtigten Interessen an einer effizienten und sicheren Zurverfügungstellung dieses Onlineangebotes gem. Art. 6 Abs. 1 lit. f DSGVO i.V.m. Art. 28 DSGVO (Abschluss Auftragsverarbeitungsvertrag).
-    </span>
-</p>
-<p></p>
-<h3 id="dsg-logfiles">Erhebung von Zugriffsdaten und Logfiles</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        Wir, bzw. unser Hostinganbieter, erhebt auf Grundlage unserer berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO Daten über jeden Zugriff auf den Server, auf dem sich dieser Dienst befindet (sogenannte Serverlogfiles). Zu den Zugriffsdaten gehören Name der abgerufenen Webseite, Datei, Datum und Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite), IP-Adresse und der anfragende Provider.<br>
-        <br>
-        Logfile-Informationen werden aus Sicherheitsgründen (z.B. zur Aufklärung von Missbrauchs- oder Betrugshandlungen) für die Dauer von maximal 7 Tagen gespeichert und danach gelöscht. Daten, deren weitere Aufbewahrung zu Beweiszwecken erforderlich ist, sind bis zur endgültigen Klärung des jeweiligen Vorfalls von der Löschung ausgenommen.
-    </span>
-</p>
-<p></p>
-<h3 id="dsg-socialmedia">Onlinepräsenzen in sozialen Medien</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und Plattformen, um mit den dort aktiven Kunden, Interessenten und Nutzern kommunizieren und sie dort über unsere Leistungen informieren zu können.<br>
-        <br>
-        Wir weisen darauf hin, dass dabei Daten der Nutzer außerhalb des Raumes der Europäischen Union verarbeitet werden können. Hierdurch können sich für die Nutzer Risiken ergeben, weil so z.B. die Durchsetzung der Rechte der Nutzer erschwert werden könnte. Im Hinblick auf US-Anbieter die unter dem Privacy-Shield zertifiziert sind, weisen wir darauf hin, dass sie sich damit verpflichten, die Datenschutzstandards der EU einzuhalten.<br>
-        <br>
-        Ferner werden die Daten der Nutzer im Regelfall für Marktforschungs- und Werbezwecke verarbeitet. So können z.B. aus dem Nutzungsverhalten und sich daraus ergebenden Interessen der Nutzer Nutzungsprofile erstellt werden. Die Nutzungsprofile können wiederum verwendet werden, um z.B. Werbeanzeigen innerhalb und außerhalb der Plattformen zu schalten, die mutmaßlich den Interessen der Nutzer entsprechen. Zu diesen Zwecken werden im Regelfall Cookies auf den Rechnern der Nutzer gespeichert, in denen das Nutzungsverhalten und die Interessen der Nutzer gespeichert werden. Ferner können in den Nutzungsprofilen auch Daten unabhängig der von den Nutzern verwendeten Geräte gespeichert werden (insbesondere wenn die Nutzer Mitglieder der jeweiligen Plattformen sind und bei diesen eingeloggt sind).<br>
-        <br>
-        Die Verarbeitung der personenbezogenen Daten der Nutzer erfolgt auf Grundlage unserer berechtigten Interessen an einer effektiven Information der Nutzer und Kommunikation mit den Nutzern gem. Art. 6 Abs. 1 lit. f. DSGVO. Falls die Nutzer von den jeweiligen Anbietern der Plattformen um eine Einwilligung in die vorbeschriebene Datenverarbeitung gebeten werden, ist die Rechtsgrundlage der Verarbeitung Art. 6 Abs. 1 lit. a., Art. 7 DSGVO.<br>
-        <br>
-        Für eine detaillierte Darstellung der jeweiligen Verarbeitungen und der Widerspruchsmöglichkeiten (Opt-Out), verweisen wir auf die nachfolgend verlinkten Angaben der Anbieter.<br>
-        <br>
-        Auch im Fall von Auskunftsanfragen und der Geltendmachung von Nutzerrechten, weisen wir darauf hin, dass diese am effektivsten bei den Anbietern geltend gemacht werden können. Nur die Anbieter haben jeweils Zugriff auf die Daten der Nutzer und können direkt entsprechende Maßnahmen ergreifen und Auskünfte geben. Sollten Sie dennoch Hilfe benötigen, dann können Sie sich an uns wenden.<br>
-        <br>
-        - Facebook, -Seiten, -Gruppen, (Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland) auf Grundlage einer <a target="_blank" href="https://www.facebook.com/legal/terms/page_controller_addendum">Vereinbarung über gemeinsame Verarbeitung personenbezogener Daten</a> - Datenschutzerklärung: <a target="_blank" href="https://www.facebook.com/about/privacy/">https://www.facebook.com/about/privacy/</a>, Opt-Out: <a target="_blank" href="https://www.facebook.com/settings?tab=ads">https://www.facebook.com/settings?tab=ads</a> und <a target="_blank" href="https://www.youronlinechoices.com">https://www.youronlinechoices.com</a>, Privacy Shield: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a>.<br>
-        <br>
-        - Google/ YouTube (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA) – Datenschutzerklärung: &nbsp;<a target="_blank" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>, Opt-Out: <a target="_blank" href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>, Privacy Shield: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a>.<br>
-        <br>
-        - Instagram (Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA) – Datenschutzerklärung/ Opt-Out: <a target="_blank" href="https://instagram.com/about/legal/privacy/">https://instagram.com/about/legal/privacy/</a>.<br>
-        <br>
-        - Twitter (Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA) - Datenschutzerklärung: <a target="_blank" href="https://twitter.com/de/privacy">https://twitter.com/de/privacy</a>, Opt-Out: <a target="_blank" href="https://twitter.com/personalization">https://twitter.com/personalization</a>, Privacy Shield: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&amp;status=Active</a>.<br>
-        <br>
-        - Pinterest (Pinterest Inc., 635 High Street, Palo Alto, CA, 94301, USA) – Datenschutzerklärung/ Opt-Out: <a target="_blank" href="https://about.pinterest.com/de/privacy-policy">https://about.pinterest.com/de/privacy-policy</a>.<br>
-        <br>
-        - LinkedIn (LinkedIn Ireland Unlimited Company Wilton Place, Dublin 2, Irland) - Datenschutzerklärung <a target="_blank" href="https://www.linkedin.com/legal/privacy-policy">https://www.linkedin.com/legal/privacy-policy</a> , Opt-Out: <a target="_blank" href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out">https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a>, Privacy Shield:&nbsp;<a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&amp;status=Active</a>.<br>
-        <br>
-        - Xing (XING AG, Dammtorstraße 29-32, 20354 Hamburg, Deutschland) - Datenschutzerklärung/ Opt-Out: <a target="_blank" href="https://privacy.xing.com/de/datenschutzerklaerung">https://privacy.xing.com/de/datenschutzerklaerung</a>.<br>
-        <br>
-        - Wakalet (Wakelet Limited, 76 Quay Street, Manchester, M3 4PR, United Kingdom) - Datenschutzerklärung/ Opt-Out: <a target="_blank" href="https://wakelet.com/privacy.html">https://wakelet.com/privacy.html</a>.<br>
-        <br>
-        - Soundcloud (SoundCloud Limited, Rheinsberger Str. 76/77, 10115 Berlin, Deutschland) - Datenschutzerklärung/ Opt-Out: <a target="_blank" href="https://soundcloud.com/pages/privacy">https://soundcloud.com/pages/privacy</a>.
-    </span>
-</p>
-<p></p>
-<h3 id="dsg-thirdparty-einleitung">Einbindung von Diensten und Inhalten Dritter</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        Wir setzen innerhalb unseres Onlineangebotes auf Grundlage unserer berechtigten Interessen (d.h. Interesse an der Analyse, Optimierung und wirtschaftlichem Betrieb unseres Onlineangebotes im Sinne des Art. 6 Abs. 1 lit. f. DSGVO) Inhalts- oder Serviceangebote von Drittanbietern ein, um deren Inhalte und Services, wie z.B. Videos oder Schriftarten einzubinden (nachfolgend einheitlich bezeichnet als “Inhalte”). <br>
-        <br>
-        Dies setzt immer voraus, dass die Drittanbieter dieser Inhalte, die IP-Adresse der Nutzer wahrnehmen, da sie ohne die IP-Adresse die Inhalte nicht an deren Browser senden könnten. Die IP-Adresse ist damit für die Darstellung dieser Inhalte erforderlich. Wir bemühen uns nur solche Inhalte zu verwenden, deren jeweilige Anbieter die IP-Adresse lediglich zur Auslieferung der Inhalte verwenden. Drittanbieter können ferner so genannte Pixel-Tags (unsichtbare Grafiken, auch als "Web Beacons" bezeichnet) für statistische oder Marketingzwecke verwenden. Durch die "Pixel-Tags" können Informationen, wie der Besucherverkehr auf den Seiten dieser Website ausgewertet werden. Die pseudonymen Informationen können ferner in Cookies auf dem Gerät der Nutzer gespeichert werden und unter anderem technische Informationen zum Browser und Betriebssystem, verweisende Webseiten, Besuchszeit sowie weitere Angaben zur Nutzung unseres Onlineangebotes enthalten, als auch mit solchen Informationen aus anderen Quellen verbunden werden.
-    </span>
-</p>
-<p></p>
-<h3 id="dsg-thirdparty-googlefonts">Google Fonts</h3>
-<p></p>
-<p><span class="ts-muster-content">Wir binden die Schriftarten ("Google Fonts") des Anbieters Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA, ein. Datenschutzerklärung: <a target="_blank" href="https://www.google.com/policies/privacy/">https://www.google.com/policies/privacy/</a>, Opt-Out: <a target="_blank" href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>.</span></p>
-<p></p>
-<h3 id="dsg-thirdparty-googleplus"> Google+</h3>
-<p></p>
-<p class="ts-muster-content">Innerhalb unseres Onlineangebotes können Funktionen und Inhalte der Plattform Google+, angeboten durch die Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA („Google“), eingebunden werden. Hierzu können z.B. Inhalte wie Bilder, Videos oder Texte und Schaltflächen gehören, mit denen Nutzer Inhalte dieses Onlineangebotes innerhalb von Google teilen können. Sofern die Nutzer Mitglieder der Plattform Google+ sind, kann Google den Aufruf der o.g. Inhalte und Funktionen den dortigen Profilen der Nutzer zuordnen.</p>
-<h3>Google Analytics</h3>
-<p>Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA.</p>
-<p>Google Analytics verwendet so genannte "Cookies". Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
-<p><strong>Browser Plugin</strong></p>
-<p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch den Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IPAdresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout?hl=de</a></p>
-<p>Google ist unter dem Privacy-Shield-Abkommen zertifiziert und bietet hierdurch eine Garantie, das europäische Datenschutzrecht einzuhalten (<a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a>). Weitere Informationen zur Datennutzung durch Google, Einstellungs- und Widerspruchsmöglichkeiten, erfahren Sie in der Datenschutzerklärung von Google (<a target="_blank" href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>) sowie in den Einstellungen für die Darstellung von Werbeeinblendungen durch Google <a target="_blank" href="https://adssettings.google.com/authenticated">(https://adssettings.google.com/authenticated</a>).</p>
-
-<h3>Data Privacy <img src="~/img/flags/english.jpg" alt="English Flag" class="img-responsive" width="30" height="30" /></h3>
-<h2>Data protection declaration</h2>
-<h3 id="dsg-general-intro"></h3>
-<p>
-    This privacy statement informs you about the nature, the scope and purpose of the processing of personal data (hereafter short "data") in the framework of the provision of our services, as well as within our website and the Web pages associated with
-    it, Features and contents, as well as external online presences, such as our social media profiles on (hereinafter together referred to as "Online services"). In terms of on the used terminology, such as "Processing" or "Responsible", we refer
-    to the definitions in article 4 of the data protection Regulation (DSGVO).<br /><br />
-</p>
-<h3 id="dsg-general-controller">Person in charge</h3>
-<p>
-    <address>
-        <span itemprop="name">Sascha Manns</span>
-        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <span itemprop="streetAddress">
-                Maifeldstraße 10 <br />
-                <span itemprop="postalCode">56727</span> Mayen
-            </span><br />
-            Germany
-        </div>
-    </address>
-    <span itemprop="telephone">Telefon: +49-172-3142738</span><br />
-    <a href="mailto:Sascha.Manns@@outlook.de" itemprop="email">
-        Sascha.Manns@@outlook.de
-    </a>
-</p>
-<h3 id="dsg-general-datatype">Types of data processed</h3>
-<p>
-    <ul>
-        <li>Content data (for example, text input, photographs, videos).</li>
-        <li>Use data (E.g., interest in content, access times visited Web pages,).</li>
-        <li>Meta - / communication data (for example, device information, IP addresses).</li>
-    </ul>
-</p>
-<h3 id="dsg-general-datasubjects">Categories of data subjects</h3>
-<p>
-    Visitors and users of the website (below refer to the affected people collectively as "Users").<br>
-</p>
-<h3 id="dsg-general-purpose">Purpose of the processing</h3>
-<p>
-    <ul>
-        <li>Provision of the website, its features and content.</li>
-        <li>Respond to contact requests and communication with users.</li>
-        <li>Safety measures.</li>
-        <li>Audience measurement/marketing</li>
-    </ul>
-    <span class="tsmcom"></span>
-</p>
-<h3 id="dsg-general-terms">Terminology </h3>
-<p>
-    <strong>"Personal data"</strong> means any information relating to an identified or identifiable natural person (hereinafter referred to as "data subject"); identify a natural person is considered, the directly or indirectly, in particular by
-    means of assignment to an identifier such as a name, an identification number, location data, to an online ID (E.g. cookie) or to one or more special features can be identified, are the expression of the physical, physiological, genetic, mental,
-    economic, cultural or social identity of that natural person.<br>
-    <br>
-    <strong>"Processing"</strong> is anyone with or without the help of automated procedures operation performed or every such operation number in connection with personal data. The concept goes a long way and includes practically every dealing with
-    data.<br>
-    <br>
-    <strong>"Use of pseudonyms"</strong> the processing of personal data in such a way that the personal data without using additional information of no longer a specific person concerned can be associated, if these additional Information is kept
-    separately and are subject to technical and organisational measures that ensure that the personal data is assigned to one identified or identifiable natural person.<br>
-    <br>
-    <strong>"Profiling"</strong> any kind of automated processing of personal data, that is, that these personal data are used to evaluate certain personal aspects relating to a natural person, in particular to aspects with regard to job performance,
-    economy, health, personal preferences, interests, reliability, behavior, to analyze the place of residence or change of location of that natural person or to predict.<br>
-    <br> The natural or legal person, public authority, agency or other body which determines the purposes and means of the processing of personal data alone or jointly with others, is known as "Responsible".<br>
-    <br>
-    <strong>"Processor"</strong> a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.<br>
-</p>
-<h3 id="dsg-general-legalbasis">Relevant legal bases</h3>
-<p>
-    In accordance with article 13 DSGVO we inform you with the legal bases of our data processing operations. For users from the scope of the data protection Regulation (DSGVO), i.e. the EU and of the EEC applies, unless the legal basis in the privacy statement is not called, the following:
-    <ul>
-        <li>The legal basis for the obtaining of consent is article 6 par. 1 lit. a and article 7 DSGVO;</li>
-        <li>
-            The legal basis for the processing to the fulfilment of our services and contractual measures, as well
-            as answering questions on is article 6 par. 1 lit. b DSGVO;
-        </li>
-        <li>The legal basis for the processing to fulfil our legal obligations is article 6 par. 1 lit. c DSGVO;</li>
-        <li>
-            The case that vital interests of the data subject or another natural person
-            require a processing of personal data, article 6 serves for par. 1 lit. d DSGVO as the legal basis.
-        </li>
-        <li>
-            The legal basis for the processing that is required to perform a task that is in the public interest or in exercise of official authority
-            is awarded to the person in charge is article 6 par. 1 lit. e DSGVO.
-        </li>
-        <li>The legal basis for the processing to preserve our legitimate interests is article 6 par. 1 lit. f DSGVO.</li>
-        <li>
-            The processing of data for purposes other than those for
-            which they were has, shall be determined according to the specifications of the type 6 para 4 DSGVO.
-        </li>
-        <li>
-            The processing of special categories of data (according to art. 9 par. 1 DSGVO) shall be governed by the provisions of article 9 para 2
-            DSGVO.
-        </li>
-    </ul>
-</p>
-<h3 id="dsg-general-securitymeasures">Security measures</h3>
-<p>
-    We meet in accordance with the statutory requirement, taking into account the State of technology, the implementation costs and the type, scope, the circumstances and the purposes of the processing, as well as the different probability of occurrence and
-    severity of the Risk to the rights and freedoms of individuals, appropriate technical and organisational measures to ensure a level of protection commensurate with the risk.<br>
-    <br> In particular ensuring the confidentiality, integrity and availability of data among the measures by controlling physical access to data, as also concerning him or her access, input, sharing, securing availability and their Separation. Furthermore,
-    we have established procedures which ensure a perception of affected rights, deletion of data and response to risk the data. In addition, we consider the protection of personal data already in the development or selection of hardware, software
-    and procedures, in accordance with the principle of data protection through technology design and privacy-friendly default settings.<br>
-</p>
-<h3 id="dsg-general-coprocessing">Cooperation with subcontractors, jointly responsible and third parties</h3>
-<p>
-    If we disclose information to other persons and companies (subcontractors, together responsible or third parties) during our processing, they send to them or otherwise provide them access to the data, this is done only on the basis a legal permission
-    (for example, if a transmission of data to third parties such as payment for performance of the contract is required), users have consented, so provides a legal obligation or on the basis of our vested interests (E.g. for the use of agents, Web
-    hosting providers, etc.). <br>
-    <br> If we disclose information to other companies within our corporate group, submit or otherwise provide them the access, this is the legal requirements in particular for administrative purposes as legitimate interest and about freely on a appropriate
-    basis.<br>
-</p>
-<h3 id="dsg-general-thirdparty">Transfers to third countries</h3>
-<p>
-    If we process data in a third country (i.e. outside the European Union (EU), the European economic area (EEA) or the Swiss Confederation) or in the context of the use of services third party disclosure or transmission of Data to other persons or companies
-    is done, this is only allowed if it is done to meet our (pre) contractual obligations, upon your consent, due to a legal obligation or on the basis of our legitimate interests. Subject to legal or contractual licences, process or we let the data
-    to a third country only if the existence of the statutory requirements. I.e. the processing occurs for example based on special guarantees, such as determining officially recognized, one of the EU of appropriate level of data protection (E.g.
-    for the United States through the "Privacy shield") or compliance with officially recognised special contractual Obligations.
-</p>
-<h3 id="dsg-general-rightssubject">Rights of the persons concerned</h3>
-<p>
-    <ul>
-        <li>You have the right to ask whether the data will be processed a confirmation and information on these data as well as more information and copy of the data in accordance with the statutory provisions.</li>
-        <li>They have accordingly. the legal requirements to inaccurate data concerning the right to the completion of the data concerning you or the correction of you require.</li>
-        <li>You have in accordance with the statutory provisions the right to require that data be deleted immediately, or alternatively in accordance with the statutory provisions to require a limitation of the data.</li>
-        <li>You have the right to request that the personal data you have provided to us in accordance with the legal requirements to obtain and to request their transfer to other responsible.</li>
-        <li>To have the right to submit a complaint to the competent supervisory authority, also in accordance with the statutory provisions.</li>
-    </ul>
-</p>
-<h3 id="dsg-general-revokeconsent">Right of withdrawal</h3>
-<p>Sie haben das Recht, erteilte Einwilligungen mit Wirkung für die Zukunft zu widerrufen.</p>
-<h3 id="dsg-general-object">Right of objection</h3>
-<p>
-    <strong>You can at any time object to the future processing of data relating to you in accordance with the statutory provisions. The opposition can be made in particular for processing for purposes of direct marketing.</strong>
-</p>
-<h3 id="dsg-general-cookies">Cookies and right of objection in direct marketing</h3>
-<p>
-    Small files called "Cookies", which are stored on computers of users. Different readings can be stored within the cookies. A cookie is used primarily to save the information to a user (or the device on which the cookie is stored) during or after his visit
-    within a website. Cookies are known as temporary cookies, or "Session-Cookies" or "transient cookie", which are deleted after a user leaves an online offer and closes his browser. In such a cookie, for example, the contents of a shopping cart
-    in an online store or a login status can be saved. Cookies are called "permanent" or "persistent", which will be retained after the browser is closed. So, for example, the login status can be saved when the users search them for several days.
-    As the interests of users, it can be stored in such a cookie used for audience measurement, or marketing purposes. Cookies are referred to as "Third party cookies", which are offered by other vendors as the person in charge, who runs the online
-    offer, (otherwise, if they are only the cookies it is called "First-Party Cookies").<br>
-    <br> We may use temporary and permanent cookies and enlighten about this in our privacy policy.<br>
-    <br> If users do not want that stored cookies on your computer, they will be asked the appropriate option in the system settings of your browser to disable. Stored cookies can be deleted in the system settings of the browser. The exclusion of
-    cookies can lead to functional limitations of this online offer.<br>
-    <br> A general opposition to the use of cookies for purposes of online marketing in a variety of services, especially in the case of tracking, on the American side of https://www.aboutads.info/choices/ or the EU side can https:// www.youronlinechoices.com/
-    are explained. Also, the storage of cookies can be achieved using whose cut-off in the settings of your browser. Please note that if necessary, not all functions of this website can be used.
-</p>
-<h3 id="dsg-general-erasure">Deletion of data</h3>
-<p>
-    The data processed by us will be deleted in accordance with the statutory provisions or restricted in their processing. If not explicitly specified in the context of this privacy policy, the data stored with us are deleted as soon as they are no longer
-    required for its intended purpose and no statutory retention obligations preclude deletion.<br>
-    <br> If the data is not deleted because they are required for other legally permissible purposes, the processing is restricted. I.e. the data is locked and not processed for any other purpose. This applies E.g. for data that must be kept for commercial
-    or fiscal reasons.
-</p>
-<h3 id="dsg-general-changes">Changes and updates to the privacy statement</h3>
-<p>
-    We ask you to inform regularly about the content of our privacy policy. We adapt the privacy statement, as soon as the changes of the data processing operations carried out by us require this. We will inform you, as soon as the changes an act of participation
-    on your part (E.g. consent) or other individual notification is required.
-</p>
-<h3 id="dsg-disqus">DISQUS commenting</h3>
-<p>
-    <span class="ts-muster-content">
-        We rely on basis of our legitimate interests in an efficient, secure and user friendly comment management according Article 6 par. 1 lit. f. DSGVO the DISQUS, comment service offered by the DISQUS, Inc., 301 Howard St, floor 3, San Francisco, California 94105, United States, a. DISQUS is certified under the privacy shield agreement and this provides a guarantee to comply with European data protection law: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000TRkEAAW&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000TRkEAAW&amp;status=Active</a>.<br>
-        <br>
-        To use the DISQUS comment function, users can login via an own DISQUS account or an existing social media accounts (E.g., OpenID, Facebook, Twitter, or Google). Here, the credentials of the user is obtained by DISQUS by the platforms. It is also possible the DISQUS commenting as a guest without creating or using user account with DISQUS or one of the specified social media providers to use.<br>
-        <br>
-        We embed only DISQUS with its functions in our website, where we can have an influence on the comments of users. Users however enter into a direct contractual relationship with DISQUS, within whose framework DISQUS processed the comments of users and is a contact person for any deletion of the user's data. We refer here to the DISQUS privacy policy: https://help.disqus.com/terms-and-policies/disqus-privacy-policy and the user also indicate that they can assume, that DISQUS next to the comment content even with the IP address and the timing of the comment stores as well as the user stores cookies on the computers and can be used for the display of advertising. Users can however object to the processing of their data for the purpose of displaying ads: <a target="_blank" href="https://disqus.com/data-sharing-settings/">https://disqus.com/data-sharing-settings</a>. <br>
-    </span>
-</p>
-<h3 id="dsg-comments">Comments and contributions</h3>
-<p>
-    <span class="ts-muster-content">
-        Users can leave comments or other contributions, their IP addresses on the basis of our legitimate interests within the meaning of article 6 can par. 1 lit. f. DSGVO stored for 7 days. This is done for our safety, if someone leaves illegal content in comments and contributions (prohibited political propaganda, insults, etc.). In this case, we can be prosecuted even for the comment or post and are therefore interested in the identity of the author.<br>
-        <br>
-        Furthermore we reserve the right, on the basis of our vested interests pursuant Article 6 par. 1 lit. f. DSGVO, the information of the user for the purpose of spam detection to process.<br>
-        <br>
-        On the same legal basis we reserve the right to store the IP addresses of users for their duration in the case of surveys and to use cookies to prevent multiple votes.<br>
-        <br>
-        That are stored permanently in the context of comments and posts communicated information to the person, any contact and website information as the content information, by us to contrast of the user.
-    </span>
-</p>
-<h3 id="dsg-contact">Contact</h3>
-<p>
-    <span class="ts-muster-content">
-        When contacting with us (E.g. via contact form, email, phone or via social media) the data of the user are lit on the handling of the contact request and whose settlement pursuant Article 6 para 1. b. (vertraglicher-in the frame / pre-contractual relations), article 6 par. 1 lit. processed f. (other enquiries) DSGVO... The data of the user can be stored in a customer relationship management system (CRM system") or similar inquiries organization.<br>
-        <br>
-        We delete the requests if they are no longer required. We check the necessity every two years; Also apply the legal archiving requirements.
-    </span>
-</p>
-<h3 id="dsg-hostingprovider">Hosting and email</h3>
-<p>
-    <span class="ts-muster-content">
-        The hosting services used by us are the provision of the following services: infrastructure and platform services, compute, storage and database services, email, security services, as well as technical maintenance services, we employ for the purposes of the operation of this website.<br>
-        <br>
-        This process of customers, prospective customers, and visitors to this website on the basis of our legitimate interests we or our hosting provider inventory data, contact data, content data, contract data, usage data, meta - and communication data to an efficient and safe provision of this website according Article 6 par. 1 lit. f DSGVO i.V.m article 28 DSGVO (contract order processing).
-    </span>
-</p>
-<h3 id="dsg-logfiles">Collection of access data and log files</h3>
-<p>
-    <span class="ts-muster-content">
-        We or our hosting provider, does paragraph 1 on basis of our legitimate interests within the meaning of article 6 lit. f. DSGVO data on every access to the server on which this service resides (so-called server log files). To access data, message about successful retrieval, browser type and version, the operating system of the user, referrer URL (the previously visited page), IP address, and which belong to the retrieved Web page, file, name date and time of the retrieval, amount of data, requesting provider.<br>
-        <br>
-        Log file information is stored for security reasons (E.g. to the elucidation of abuse or fraud) for a period of 7 days and then deleted. Data, which more conservation is required for evidentiary purposes are excluded from deletion until final clarification of the incident.
-    </span>
-</p>
-<h3 id="dsg-socialmedia">Online presences in social media</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        We maintain online presence within social networks and platforms to communicate with there active customers, prospective customers and users and they find there about our services.<br>
-        <br>
-        We would like to point out that data of users outside the area of the European Union can be processed here. This risk can arise for users, because such as the enforcement of the rights of users could be made more difficult. As we point out on U.S. carriers that are certified under the privacy shield, that they undertake to comply with EU data protection standards.<br>
-        <br>
-        In addition, processed the user normally for market research and promotional purposes. So, user profiles can be created from the usage patterns and resulting interests of users. The usage profiles can be used in turn, switch E.g. advertisements within and outside of the platforms, which presumably correspond to the interests of users. For these purposes, cookies on the computers of users are stored usually stores the usage patterns and the interests of users. Also also data can be stored in the user profiles regardless of the equipment used by the users (especially if the users are members of the respective platforms and are logged in this).<br>
-        <br>
-        The processing of personal data of users is based on our legitimate interests in an effective information of users and communication with the users according Article 6 par. 1 lit. f. DSGVO. If users are asked by the respective providers of platforms to a consent to the described data, the legal basis of the processing is article 6 para 1. a. Article 7 DSGVO.<br>
-        <br>
-        For a detailed description of the respective processing and the inconsistent ways (opt-out), please refer to the below linked disclosures of the provider.<br>
-        <br>
-        Also in the case of information requests and the exercise of rights of users, we point out that it most effectively can be asserted at the party. Only the provider each have access to the data of the user and can take direct action and provide information. If you still need help, then you can contact us.<br>
-        <br>
-        -Facebook, pages, groups, (Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Ireland) on the basis of an agreement on joint processing of personal data: <a target="_blank" href="https://www.facebook.com/legal/terms/page_controller_addendum">privacy policy</a> - privacy policy: <a target="_blank" href="https://www.facebook.com/about/privacy/">https://www.facebook.com/about/privacy/</a>, Opt-Out: <a target="_blank" href="https://www.facebook.com/settings?tab=ads">https://www.facebook.com/settings?tab=ads</a> and <a target="_blank" href="https://www.youronlinechoices.com">https://www.youronlinechoices.com</a>, Privacy Shield: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a>.<br>
-        <br>
-        -Google / YouTube (Google LLC, 1600 Amphitheatre Parkway, mountain view, CA 94043, United States) - privacy policy: &nbsp;<a target="_blank" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>, Opt-Out: <a target="_blank" href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>, Privacy Shield: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a>.<br>
-        <br>
-        - Instagram (Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA) – Data Privacy / Opt-Out: <a target="_blank" href="https://instagram.com/about/legal/privacy/">https://instagram.com/about/legal/privacy/</a>.<br>
-        <br>
-        - Twitter (Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA) - Data Privacy: <a target="_blank" href="https://twitter.com/de/privacy">https://twitter.com/de/privacy</a>, Opt-Out: <a target="_blank" href="https://twitter.com/personalization">https://twitter.com/personalization</a>, Privacy Shield: <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&amp;status=Active</a>.<br>
-        <br>
-        - Pinterest (Pinterest Inc., 635 High Street, Palo Alto, CA, 94301, USA) – Data Privacy/ Opt-Out: <a target="_blank" href="https://about.pinterest.com/de/privacy-policy">https://about.pinterest.com/de/privacy-policy</a>.<br>
-        <br>
-        - LinkedIn (LinkedIn Ireland Unlimited Company Wilton Place, Dublin 2, Irland) - Data Privacy <a target="_blank" href="https://www.linkedin.com/legal/privacy-policy">https://www.linkedin.com/legal/privacy-policy</a> , Opt-Out: <a target="_blank" href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out">https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a>, Privacy Shield:&nbsp;<a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&amp;status=Active</a>.<br>
-        <br>
-        - Xing (XING AG, Dammtorstraße 29-32, 20354 Hamburg, Deutschland) - Data Privacy/ Opt-Out: <a target="_blank" href="https://privacy.xing.com/de/datenschutzerklaerung">https://privacy.xing.com/de/datenschutzerklaerung</a>.<br>
-        <br>
-        - Wakalet (Wakelet Limited, 76 Quay Street, Manchester, M3 4PR, United Kingdom) - Data Privacy/ Opt-Out: <a target="_blank" href="https://wakelet.com/privacy.html">https://wakelet.com/privacy.html</a>.<br>
-        <br>
-        - Soundcloud (SoundCloud Limited, Rheinsberger Str. 76/77, 10115 Berlin, Deutschland) - Data Privacy/ Opt-Out: <a target="_blank" href="https://soundcloud.com/pages/privacy">https://soundcloud.com/pages/privacy</a>.
-    </span>
-</p>
-<h3 id="dsg-thirdparty-einleitung">Integration of services and content of third parties</h3>
-<p></p>
-<p>
-    <span class="ts-muster-content">
-        We use within our online offer on basis of our legitimate interests (i.e., interest in the analysis, optimization and economic operation of our website for the purposes of article 6 par. 1 lit. f. DSGVO) content or services by A third-party, to include their content and services, such as videos or fonts (hereinafter uniformly referred to as "Content").<br>
-        <br>
-        This always assumes that the third-party provider of such content, perceive the IP address of the user, because they could not send the content without the IP address to their browser. The IP address is required for the presentation of this content. We try to using only such content, their respective provider use the IP address for the delivery of content. Third parties can also called pixel tags (invisible graphics, also called "Web Beacons" referred to) use for statistical and marketing purposes. Information such as the visitor traffic on the pages of this website can be evaluated by the "pixel tags". The pseudonymous information can be stored in cookies on the user's device and include technical information about the browser and operating system, referring Web sites, visit time and further information on the use of our online offer contain, as well as be connected with such information from other sources.
-    </span>
-</p>
-<h3 id="dsg-thirdparty-googlefonts">Google fonts</h3>
-<p><span class="ts-muster-content">We integrate 1600 the fonts ("Google fonts") of the provider Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA, ein. Datenschutzerklärung: <a target="_blank" href="https://www.google.com/policies/privacy/">https://www.google.com/policies/privacy/</a>, Opt-Out: <a target="_blank" href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>.</span></p>
-<h3 id="dsg-thirdparty-googleplus"> Google+</h3>
-<p></p>
-<p><span>Within our website you can functions and content of the platform Google +, offered by Google LLC, 1600 Amphitheatre Parkway, mountain view, CA 94043, United States ("Google"), incorporated. This may include E.g. content such as images, videos or texts and buttons, with which users can share content of this website within Google. If the users are members of the Google + platform, Google can map the local profiles of users calling the above content and features.</span></p>
-<h3>Google Analytics</h3>
-<p>This website uses features of the Google Analytics Web analysis service. Provider is Google Inc., 1600 Amphitheatre Parkway mountain view, CA 94043, United States.</p>
-<p>Google Analytics uses so-called "cookies". These are text files that are stored on your computer and enable analysis of your use of the website by you. The information generated by the cookie about your use of this Web site are usually transmitted to a server of Google in the United States and stored there.</p>
-<p><strong>Browser Plugin</strong></p>
-<p>You can prevent the storage of cookies by adjusting your browser software; We point out however, that you fully can use if necessary, not all functions of this website in this case. You can also prevent data of generated by the cookie and related to your use of the website (including your IP address) on Google, as well as the processing of this data by Google, by you browser plug-in available at the following link Download and install: <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout?hl=de</a></p>
-<p>Google is certified under the privacy shield agreement and this provides a guarantee to comply with European data protection law (<a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a>). More information about the use of data by Google, settings and inconsistent ways, learn in the privacy of Google (<a target="_blank" href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>) as well as in the preferences for the appearance of Ads by Google <a target="_blank" href="https://adssettings.google.com/authenticated">(https://adssettings.google.com/authenticated</a>). <br /><a href="https://datenschutz-generator.de" class="dsg1-6" rel="nofollow" target="_blank">Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke</a></p>
-
-<p><a href="https://datenschutz-generator.de" class="dsg1-6" rel="nofollow" target="_blank">Created with privacy Generator.de RA Dr. Thomas Schwenke</a></p>
+<h2 id="m3">@Localizer["toc-responsible"]</h2>
+<p>Sascha Manns<br>Maifeldstraße 10<br>56727 Mayen</p>
+<p><strong>@Localizer["responsible-person"]:</strong> Sascha Manns</p>
+<p><strong>@Localizer["responsible-email"]:</strong> <a href="mailto:Sascha.Manns@outlook.de">Sascha.Manns@outlook.de</a></p>
+<p><strong>@Localizer["responsible-phone"]:</strong> +49-172-3142738</p>
+<p><strong>@Localizer["responsible-imprint"]:</strong> <a href="http://saschamanns.de/imprint" target="_blank">http://saschamanns.de/imprint</a></p>
+<br />
+<h2 id="mOverview">@Localizer["toc-processing"]</h2>
+<p>@Localizer["processing-purposes"]</p>
+<h3>@Localizer["processing-types"]</h3>
+<ul>
+    <li>@Localizer["processing-contentdata"].</li>
+    <li>@Localizer["processing-contactdetails"].</li>
+    <li>@Localizer["processing-meta"].</li>
+    <li>@Localizer["processing-usage"].</li>
+</ul>
+<h3>@Localizer["processing-personcategory"]</h3>
+<ul>
+    <li>@Localizer["processing-interests"].</li>
+    <li>@Localizer["processing-communicationpartner"].</li>
+    <li>@Localizer["processing-user"].</li>
+</ul>
+<h3>@Localizer["processing-toc-purpose"]</h3>
+<ul>
+    <li>@Localizer["processing-toc-provision"].</li>
+    <li>@Localizer["processing-toc-feedback"].</li>
+    <li>@Localizer["processing-toc-contact"].</li>
+    <li>@Localizer["processing-toc-access"].</li>
+    <li>@Localizer["processing-toc-security"].</li>
+    <li>@Localizer["processing-toc-tracking"].</li>
+    <li>@Localizer["processing-toc-managing"].</li>
+</ul>
+<h3 id="m13">@Localizer["toc-legal-bases"]</h3>
+<p>@Localizer["legal-bases-blurp"]</p>
+<ul>
+    <li>@Localizer["legal-bases-consent"]</li>
+    <li>@Localizer["legal-bases-contract"]</li>
+    <li>@Localizer["legal-bases-interests"]</li>
+</ul>
+<p>@Localizer["legal-bases-additionals"]</p>
+<h2 id="m27">@Localizer["toc-safety"]</h2>
+<p>@Localizer["legal-bases-measures"]</p>
+<p>@Localizer["legal-bases-control"]</p>
+<p>@Localizer["legal-bases-ssl"]</p>
+<h2 id="m134">@Localizer["toc-cookies"]</h2>
+<p>@Localizer["cookies-blurp"]</p>
+<p>@Localizer["cookies-types"]</p>
+<ul>
+    <li>@Localizer["cookies-type-temp"]</li>
+    <li>@Localizer["cookies-type-permanent"]</li>
+    <li>@Localizer["cookies-type-first"]</li>
+    <li>@Localizer["cookies-type-third"]</li>
+    <li>@Localizer["cookies-type-essential"]</li>
+    <li>@Localizer["cookies-type-statistic"]</li>
+</ul>
+<p>@Localizer["cookies-type-rights"]</p>
+<p>@Localizer["cookies-type-save"]</p>
+<p>@Localizer["cookies-type-revocation"]</p>
+<p>@Localizer["cookies-type-processing"]</p>
+<ul class="m-elements">
+    <li>@Localizer["cookies-type-data"]</li>
+    <li>@Localizer["cookies-type-affected"]</li>
+    <li>@Localizer["cookies-legal-basis"]</li>
+</ul>
+<h2 id="m104">@Localizer["toc-blogs"]</h2>
+<p>@Localizer["blogs-blurp"]</p>
+<p>@Localizer["blogs-comments"]</p>
+<p>@Localizer["blogs-spam"]</p>
+<p>@Localizer["blogs-survey"]</p>
+<p>@Localizer["blogs-comments-data"]</p>
+<ul class="m-elements">
+    <li>@Localizer["blogs-processed-data"]</li>
+    <li>@Localizer["blogs-affected-person"]</li>
+    <li>@Localizer["blogs-purpose"]</li>
+    <li>@Localizer["blogs-legal"]</li>
+</ul>
+<h2 id="m182">@Localizer["toc-contact"]</h2>
+<p>@Localizer["contact-us"]</p>
+<p>@Localizer["contact-answering"]</p>
+<ul class="m-elements">
+    <li>@Localizer["contact-data-types"]</li>
+    <li>@Localizer["contact-affected"]</li>
+    <li>@Localizer["contact-purposes"]</li>
+    <li>@Localizer["contact-legal"]</li>
+</ul>
+<h2 id="m263">@Localizer["toc-analytics"]</h2>
+<p>@Localizer["analytics-blurp"]</p>
+<p>@Localizer["analytics-tests"]</p>
+<p>@Localizer["analytics-userprofile"]</p>
+<p>@Localizer["analytics-ip"]</p>
+<p>@Localizer["analytics-legal-bases"]</p>
+<ul class="m-elements">
+    <li>@Localizer["analytics-data"]</li>
+    <li>@Localizer["blogs-affected-person"]</li>
+    <li>@Localizer["analytics-purpose"]</li>
+    <li>@Localizer["analytics-security"]</li>
+    <li>@Localizer["analytics-legal"]</li>
+</ul>
+<p>@Localizer["analytics-services"]</p>
+<ul class="m-elements">
+    <li>@Localizer["analytics-google"]</li>
+</ul>
+<h2 id="m264">@Localizer["toc-onlinemarketing"]</h2>
+<p>@Localizer["onlinemarketing-blurp"]</p>
+<p>@Localizer["onlinemarketing-userprofile"]</p>
+<p>@Localizer["onlinemarketing-ip"]</p>
+<p>@Localizer["onlinemarketing-profile"]</p>
+<p>@Localizer["onlinemarketing-profile1"]</p>
+<p>@Localizer["onlinemarketing-marketing"]</p>
+<p>@Localizer["onlinemarketing-cookies"]</p>
+<p>@Localizer["onlinemarketing-legal"]</p>
+<ul class="m-elements">
+    <li>@Localizer["onlinemarketing-datatypes"]</li>
+    <li>@Localizer["onlinemarketing-affected"]</li>
+    <li>@Localizer["onlinemarketing-purpose"]</li>
+    <li>@Localizer["onlinemarketing-security"]</li>
+    <li>@Localizer["onlinemarketing-legalbase"]</li>
+    <li>@Localizer["onlinemarketing-optout"]</li>
+</ul>
+<p><strong>@Localizer["onlinemarketing-services"]:</strong></p>
+<ul class="m-elements">
+    <li>@Localizer["onlinemarketing-google"]</li>
+</ul>
+<h2 id="m136">@Localizer["toc-onlinemedia"]</h2>
+<p>@Localizer["onlinemedia-blurp"]</p>
+<p>@Localizer["onlinemedia-blurp1"]</p>
+<p>@Localizer["onlinemedia-blurp2"]</p>
+<p>@Localizer["onlinemedia-blurp3"]</p>
+<p>@Localizer["onlinemedia-blurp4"]</p>
+<p>@Localizer["onlinemedia-facebook"]</p>
+<ul class="m-elements">
+    <li>@Localizer["onlinemedia-processed"]</li>
+    <li>@Localizer["onlinemedia-affected"]</li>
+    <li>@Localizer["onlinemedia-purpose"]</li>
+    <li>@Localizer["onlinemedia-law"]</li>
+</ul>
+<p>@Localizer["onlinemarketing-services"]</p>
+<ul class="m-elements">
+    <li>@Localizer["onlinemedia-instagram"]</li>
+    <li>@Localizer["onlinemedia-facebook1"]</li>
+    <li>@Localizer["onlinemedia-linkedin"]</li>
+    <li>@Localizer["onlinemedia-twitter"]</li>
+    <li>@Localizer["onlinemedia-xing"]</li>
+</ul>
+<h2 id="m328">@Localizer["toc-plugins"]</h2>
+<p>@Localizer["plugins-blurp"]</p>
+<p>@Localizer["plugins-blurp2"]</p>
+<p>@Localizer["plugins-law"]</p>
+<ul class="m-elements">
+    <li>@Localizer["plugins-processed"]</li>
+    <li>@Localizer["plugins-affected"]</li>
+    <li>@Localizer["plugins-purpose"]</li>
+    <li>@Localizer["plugins-law"]</li>
+</ul>
+<p>@Localizer["analytics-services"]</p>
+<ul class="m-elements">
+    <li>@Localizer["plugins-fontawesome"]</li>
+    <li>@Localizer["plugins-googlefonts"]</li>
+    <li>@Localizer["plugins-recaptcha"]</li>
+    <li>@Localizer["plugins-slideshare"]</li>
+</ul>
+<h2 id="m12">@Localizer["delete"]</h2>
+<p>@Localizer["plugins-deletion-blurp"]</p>
+<p>@Localizer["plugins-deletion-blurp1"]</p>
+<p>@Localizer["plugins-deletion-blurp2"]</p>
+<h2 id="m15">@Localizer["plugins-changes"]</h2>
+<p>@Localizer["plugins-changes-blurp"]</p>
+<p>@Localizer["plugins-changes-blurp1"]</p>
+<h2 id="m10">@Localizer["plugins-changes-rights"]</h2>
+<p>@Localizer["plugins-changes-rights1"]</p>
+<ul>
+    <li>@Localizer["plugins-changes-rights2"]</li>
+    <li>@Localizer["plugins-changes-rights3"]</li>
+    <li>@Localizer["plugins-changes-rights4"]</li>
+    <li>@Localizer["plugins-changes-rights5"]</li>
+    <li>@Localizer["plugins-changes-rights6"]</li>
+    <li>@Localizer["plugins-changes-rights7"]</li>
+    <li>@Localizer["plugins-changes-rights8"]</li>
+</ul>
+<h2 id="m42">@Localizer["glossary-title"]</h2>
+<p>@Localizer["glossary-blurp"]</p>
+<ul class="glossary">
+    <li>@Localizer["glossary-ip-mask"]</li>
+    <li>@Localizer["glossary-marketing"]</li>
+    <li>@Localizer["glossary-conversion-measurement"]</li>
+    <li>@Localizer["glossary-personal-data"]</li>
+    <li>@Localizer["glossary-profiling"]</li>
+    <li>@Localizer["glossary-range-measurement"]</li>
+    <li>@Localizer["glossary-remarketing"]</li>
+    <li>@Localizer["glossary-tracking"]</li>
+    <li>@Localizer["glossary-responsible"]</li>
+    <li>@Localizer["glossary-processing"]</li>
+</ul>
+<p class="seal"><a href="https://datenschutz-generator.de/?l=de" title="@Localizer["seal"]" target="_blank" rel="noopener noreferrer nofollow">@Localizer["seal1"]</a></p>

@@ -1,7 +1,9 @@
-﻿@{
-    ViewBag.Title = "About Me - Sascha Manns's Twilight Zone";
-    ViewBag.PageName = "Testimonials";
-    ViewBag.PageBlurb = "What others saying ...";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewBag.Title = Localizer["viewbag-title"];
+    ViewBag.PageName = Localizer["viewbag-pagename"];
+    ViewBag.PageBlurb = Localizer["viewbag-pageblurp"];
     ViewBag.PageImage = "/img/headers/customer-testimonials-hero.jpg";
 }
 @inject IConfiguration config
@@ -30,7 +32,7 @@
 
 }
 
-<h1>Testimonials</h1>
+<h1>@Localizer["viewbag-pagename"]</h1>
 
 <div class="container">
     <div class="row">

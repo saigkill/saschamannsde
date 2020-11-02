@@ -2,11 +2,17 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Localization.Routing;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using WilderBlog.Data;
 using WilderBlog.Logger;
 using WilderBlog.MetaWeblog;
@@ -62,6 +68,12 @@ namespace WilderBlog
                 svcs.AddScoped<IWilderRepository, WilderRepository>();
             }
 
+            // Localization part
+            //svcs.AddLocalization(options => options.ResourcesPath = "Resources");
+            svcs.AddMvc()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
+
             svcs.AddTransient<WilderInitializer>();
             svcs.AddScoped<AdService>();
 
@@ -85,6 +97,23 @@ namespace WilderBlog
             // Add MVC to the container
             svcs.AddControllersWithViews();
 
+            svcs.AddLocalization(opt =>
+            {
+                opt.ResourcesPath = "Resources";
+            });
+
+            svcs.Configure<RequestLocalizationOptions>(options =>
+            {
+                List<CultureInfo> supportedCultures = new List<CultureInfo>
+                {
+                    new CultureInfo("en-US"),
+                    new CultureInfo("de-DE")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture("en-US");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -110,6 +139,12 @@ namespace WilderBlog
                 app.UseHttpsRedirection();
             }
 
+            //var supportedCultures = new[] { "en-US", "de-DE" };
+            //var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
+            //    .AddSupportedCultures(supportedCultures)
+            //    .AddSupportedUICultures(supportedCultures);
+            //app.UseRequestLocalization(localizationOptions);            
+
             // Support MetaWeblog API
             app.UseMetaWeblog("/livewriter");
 
@@ -129,9 +164,28 @@ namespace WilderBlog
             app.UseAuthentication();
             app.UseAuthorization();
 
+            IList<CultureInfo> supportedCultures = new List<CultureInfo>
+            {
+                new CultureInfo("en-US"),
+                new CultureInfo("de-DE"),
+            };
+
+            var requestLocalizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("en-US"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            };
+
+            var requestProvider = new RouteDataRequestCultureProvider();
+            requestLocalizationOptions.RequestCultureProviders.Insert(0, requestProvider);
+
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
+
             app.UseEndpoints(cfg =>
             {
-                cfg.MapControllers();
+                cfg.MapControllerRoute(name: "default", pattern: "{controller=Root}/{action=Index}/{id?}");
             });
         }
 

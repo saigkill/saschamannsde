@@ -1,6 +1,8 @@
-﻿@model BlogStory
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@model BlogStory
 @inject WilderBlog.Services.AdService ads
 @inject Microsoft.Extensions.Configuration.IConfiguration config
+@inject IViewLocalizer Localizer
 @{
     ViewBag.Title = $"{Model.Title} - Sascha Manns";
     ViewBag.PageImage = "/img/headers/code2.jpg";
@@ -29,7 +31,7 @@
             {
                 <a asp-controller="Tag" asp-action="Index" asp-route-tag="@tag">@tag</a>
             }
-            <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
+            <br /><i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">@Localizer["comments"]</span>.
         </p>
     </div>
     <div class="post-card">
@@ -37,7 +39,7 @@
     </div>
     <div class="card">
         <div class="card-text">
-            <small>If you liked this article, so <a target="_blank" href="https://www.buymeacoffee.com/PE0y8DF"><img src="~/img/misc/buymeacoffee.jpg" alt="Buy me a coffee" width="12%"></a> :-).</small>
+            <small>@Localizer["card-title"] <a target="_blank" href="https://www.buymeacoffee.com/PE0y8DF"><img src="~/img/misc/buymeacoffee.jpg" alt="Buy me a coffee" width="12%"></a> :-).</small>
         </div>
     </div>
     <div class="card">
@@ -48,12 +50,8 @@
         </div>
         <div class="card-text">
             <small>
-                This work by <a xmlns:cc="https://creativecommons.org/ns#" href="https://saschamanns.de"
-                                property="cc:attributionName" rel="cc:attributionURL">Sascha Manns</a> is
-                licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">
-                    Attribution-ShareAlike 3.0 Germany License (CC BY-SA 3.0 DE)
-                </a>. Based on a work at <a xmlns:dct="https://purl.org/dc/terms/" href="https://saschamanns.de"
-                                            rel="dct:source">saschamanns.de</a>.
+                This work by <a xmlns:cc="https://creativecommons.org/ns#" href="https://saschamanns.de" property="cc:attributionName" rel="cc:attributionURL">Sascha Manns</a> is
+                licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">Attribution-ShareAlike 3.0 Germany License (CC BY-SA 3.0 DE)</a>. @Localizer["card-work"] <a xmlns:dct="https://purl.org/dc/terms/" href="https://saschamanns.de" rel="dct:source">saschamanns.de</a>.
             </small>
         </div>
     </div>
@@ -86,7 +84,7 @@
       (d.head || d.body).appendChild(s);
     })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <noscript>@Localizer["disqus"] <a href="https://disqus.com/?ref_noscript" rel="nofollow">@Localizer["disqus1"]</a></noscript>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/autoloader/prism-autoloader.min.js"></script>

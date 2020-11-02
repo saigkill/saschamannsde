@@ -14,16 +14,7 @@
     <FileVersion>4.1.13.0</FileVersion>
     <AllowUntrustedCertificate>True</AllowUntrustedCertificate>
     <UserSecretsId>ef6c3cab-e0ef-431e-beaf-14f9de5ad4e1</UserSecretsId>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Properties\PublishProfiles\wilderblogsite - FTP.pubxml" />
-    <None Remove="Properties\PublishProfiles\wilderblogsite - Web Deploy.pubxml" />
-    <None Remove="Properties\PublishProfiles\wilderblogsite-staging - Web Deploy.pubxml" />
-    <None Remove="Properties\PublishProfiles\wilderblogsite-WilderStaging - FTP.pubxml" />
-    <None Remove="Properties\PublishProfiles\wilderblogsite-WilderStaging - Web Deploy.pubxml" />
-    <None Remove="Properties\PublishProfiles\WildermuthBlog - Web Deploy.pubxml" />
-  </ItemGroup>
+  </PropertyGroup>  
 
   <ItemGroup>
     <None Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest" />
@@ -56,7 +47,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
-  </ItemGroup>
+  </ItemGroup>    
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">
     
