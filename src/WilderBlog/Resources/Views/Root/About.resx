@@ -101,16 +101,16 @@
     <value>Amazon Author Page</value>
   </data>
   <data name="bio" xml:space="preserve">
-    <value>Sascha Manns is a programmer, author and supporter in Germany. He worked inside the openSUSE Community as packager, weekly news editor, the board election team and the membership reviewing team. For the open-slx GmbH he worked on the openSUSE Box and wrotes handbooks and tutorials and gives support for that distribution.</value>
+    <value>Sascha Manns is a programmer, author and it-supporter in Germany. He has worked within the openSUSE Community as packager, weekly news editor, and as member of the board election team and the membership reviewing team. For the open-slx GmbH he worked on the openSUSE Box by writing support handbooks and tutorials for that distribution.</value>
   </data>
   <data name="bio1" xml:space="preserve">
-    <value>He founded a openSUSE based distribution for doctors and hospitals, which provides many open source software for the medical context. It targets people in poor contries which can't buy expensive proprietary tools.</value>
+    <value>He founded an openSUSE based distribution for doctors and hospitals, which provides many medical open source software. Specially, he has created medical software for people in developing countries where proprietary tools are too expensive.</value>
   </data>
   <data name="bio2" xml:space="preserve">
-    <value>After leaving open-slx he worked as Dispatcher, Author for Process-Management, as programmer for business workflow apps and websites and as programmer for Cache databases.</value>
+    <value>After leaving open-slx he worked as dispatcher, author for process-management, programmer for business workflow apps and websites and programmer for Cachè databases.</value>
   </data>
   <data name="bio3" xml:space="preserve">
-    <value>Sascha studied economic computer science, is Specialist Application Development, learned to program in Ruby, Python, JavaScript, C# and finished a SCRUM-Master course.</value>
+    <value>Sascha studied economic computer science, has learned to program in Ruby, Python, JavaScript, C#, and completed a SCRUM Master course. He now works as an application development specialist.</value>
   </data>
   <data name="coding-activity" xml:space="preserve">
     <value>My Coding Activity</value>

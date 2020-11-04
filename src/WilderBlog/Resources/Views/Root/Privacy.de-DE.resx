@@ -319,12 +319,6 @@
   <data name="legal-bases-ssl" xml:space="preserve">
     <value>&lt;strong&gt;SSL-Verschlüsselung (https)&lt;/strong&gt;: Um Ihre via unser Online-Angebot übermittelten Daten zu schützen, nutzen wir eine SSL-Verschlüsselung. Sie erkennen derart verschlüsselte Verbindungen an dem Präfix https:// in der Adresszeile Ihres Browsers.</value>
   </data>
-  <data name="minute" xml:space="preserve">
-    <value>Minutes </value>
-  </data>
-  <data name="minutes" xml:space="preserve">
-    <value>Minuten</value>
-  </data>
   <data name="onlinemarketing-affected" xml:space="preserve">
     <value>&lt;strong&gt;Betroffene Personen:&lt;/strong&gt; Nutzer (z.B. Webseitenbesucher, Nutzer von Onlinediensten), Interessenten.</value>
   </data>
@@ -577,12 +571,6 @@
   </data>
   <data name="seal1" xml:space="preserve">
     <value>Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke</value>
-  </data>
-  <data name="second" xml:space="preserve">
-    <value>Sekunde</value>
-  </data>
-  <data name="seconds" xml:space="preserve">
-    <value>Sekunden</value>
   </data>
   <data name="toc-analytics" xml:space="preserve">
     <value>Webanalyse, Monitoring und Optimierung</value>

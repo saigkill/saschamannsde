@@ -299,12 +299,6 @@
   <data name="legal-bases-ssl" xml:space="preserve">
     <value>&lt;strong&gt; SSL encryption (https) &lt;/strong&gt;: We use SSL encryption to protect your data transmitted via our online offer. You can recognize such encrypted connections by the prefix https: // in the address line of your browser.</value>
   </data>
-  <data name="minute" xml:space="preserve">
-    <value>Minute </value>
-  </data>
-  <data name="minutes" xml:space="preserve">
-    <value>Minutes</value>
-  </data>
   <data name="onlinemarketing-affected" xml:space="preserve">
     <value>&lt;strong&gt; Affected persons: &lt;/strong&gt; Users (e.g. website visitors, users of online services), interested parties.</value>
   </data>
@@ -556,12 +550,6 @@
   </data>
   <data name="seal1" xml:space="preserve">
     <value>Created with free Datenschutz-Generator.de by Dr. Thomas Schwenke</value>
-  </data>
-  <data name="second" xml:space="preserve">
-    <value>Second</value>
-  </data>
-  <data name="seconds" xml:space="preserve">
-    <value>Seconds</value>
   </data>
   <data name="toc-analytics" xml:space="preserve">
     <value>Web analysis, monitoring and optimization</value>

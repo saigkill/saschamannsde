@@ -100,6 +100,18 @@
   <data name="comments" xml:space="preserve">
     <value>No Comments</value>
   </data>
+  <data name="minute" xml:space="preserve">
+    <value>Minute </value>
+  </data>
+  <data name="minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="second" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
   <data name="xing-lang" xml:space="preserve">
     <value></value>
   </data>

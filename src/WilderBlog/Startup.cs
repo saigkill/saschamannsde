@@ -37,7 +37,7 @@ namespace WilderBlog
         {
             svcs.Configure<CookiePolicyOptions>(options =>
             {
-                // This lambda determines whether user consent for non-essential 
+                // This lambda determines whether user consent for non-essential
                 // cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 // requires using Microsoft.AspNetCore.Http;
@@ -84,7 +84,7 @@ namespace WilderBlog
             svcs.AddScoped<TalksProvider>();
             svcs.AddScoped<VideosProvider>();
             svcs.AddScoped<JobsProvider>();
-            svcs.AddScoped<CertsProvider>();
+            //svcs.AddScoped<CertsProvider>();
             svcs.AddScoped<TestimonialsProvider>();
             svcs.AddTransient<IImageStorageService, ImageStorageService>();
 
@@ -114,6 +114,15 @@ namespace WilderBlog
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });
+
+            if (CultureInfo.CurrentCulture.Name == "de-DE")
+            {
+                svcs.AddScoped<CertsDeProvider>();
+            }
+            else
+            {
+                svcs.AddScoped<CertsProvider>();
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -143,7 +152,7 @@ namespace WilderBlog
             //var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
             //    .AddSupportedCultures(supportedCultures)
             //    .AddSupportedUICultures(supportedCultures);
-            //app.UseRequestLocalization(localizationOptions);            
+            //app.UseRequestLocalization(localizationOptions);
 
             // Support MetaWeblog API
             app.UseMetaWeblog("/livewriter");
@@ -188,6 +197,5 @@ namespace WilderBlog
                 cfg.MapControllerRoute(name: "default", pattern: "{controller=Root}/{action=Index}/{id?}");
             });
         }
-
     }
 }

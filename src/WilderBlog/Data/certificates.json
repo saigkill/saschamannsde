@@ -1,50 +1,50 @@
 ﻿[
   {
     "id": "1",
-    "certtitle": "Kaufmann im Einzelhandel",
-    "provider": "Industrie & Handelskammer Koblenz",
+    "certtitle": "Businessman in Retail (german)",
+    "provider": "Chamber of Commerce & Industry Koblenz",
     "years": "1998",
-    "content": "Abschluss Kaufmann im Einzelhandel",
+    "content": "Graduation Businessman in Retail",
     "link": ""
   },
   {
     "id": "2",
-    "certtitle": "Schlüsselkompetenzen Kompakt",
+    "certtitle": "Key competencies compact (german)",
     "provider": "Career Webinars / DIS AG",
     "years": "2013",
-    "content": "Mit Persönlichkeit überzeugen, Zeitmanagement, Projektmanagement, Rhetorik, Situatives Führen nach Ken Blanchard.",
+    "content": "Convince with personality, Timemanagement, Projectmanagement, Rhetoric, Situational leadership according to Ken Blanchard.",
     "link": "img/cv/Certificates/1_Zertifikat_Sascha_Manns1_compressed.pdf"
   },
   {
     "id": "3",
-    "certtitle": "Web Entwicklung",
-    "provider": "TU Mittelhessen",
+    "certtitle": "Web development (german)",
+    "provider": "Technical University Mittelhessen",
     "years": "2014",
-    "content": "Webentwicklung, Webappentwicklung, Barrierefreiheit",
+    "content": "Web development, Web app development, Accessibility",
     "link": "img/cv/Certificates/2_thm-webeng1_compressed.pdf"
   },
   {
     "id": "4",
-    "certtitle": "C# Einsteigerkurs",
+    "certtitle": "C# Beginners course (german)",
     "provider": "Udemy",
     "years": "2020",
-    "content": "Datentypen, Operatoren, Methoden, Fallunterscheidungen, Arrays, Schleifen, Typenkonvertierung, OOP, Fehlerbehandlung, Math & Random-Klasse",
+    "content": "Datatypes, Operators, Methods, Case distinction, Arrays, Loops, Type conversion, OOP, Error handling, Math & Random-Class",
     "link": "img/cv/Certificates/3_Csharp-einsteigerkurs_compressed.pdf"
   },
   {
     "id": "5",
-    "certtitle": "C# Fortgeschrittenen Kurs",
+    "certtitle": "C# Advanced course (german)",
     "provider": "Udemy",
     "years": "2020",
-    "content": "Interfaces, Abstrakte Klassen, Polymorphie, Strukturen & Enums, Delegaten, Events, Collections, Generics",
+    "content": "Interfaces, Abstract Classes, Polymorphism, Structures & Enums, Delegates, Events, Collections, Generics",
     "link": "img/cv/Certificates/4_C-sharp-fortgeschritten_compressed.pdf"
   },
   {
     "id": "6",
-    "certtitle": "Fachinformatiker Anwendungsentwicklung",
+    "certtitle": "Graduation IT specialist for application development (german)",
     "provider": "Institut für Lernsysteme",
     "years": "2019-2020",
-    "content": "Objektorientierte Programmierung mit VB, Classen, Vererbung, UML, Windows Benutzeroberflächen, Datenbanken, SQL, ADO.NET, XML, MS Access, Datenbanktheorie und VBA.",
+    "content": "object oriented programing with VB, Classes, Inheritance, UML, Windows User interfaces, Databases, SQL, ADO.NET, XML, MS Access, Database theorie and VBA.",
     "link": "img/cv/Certificates/5_ILS-Fachinformatiker_compressed.pdf"
   }
 ]

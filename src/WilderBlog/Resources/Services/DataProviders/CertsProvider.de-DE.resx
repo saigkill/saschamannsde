@@ -117,22 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="comments" xml:space="preserve">
-    <value>Keine Kommentare</value>
-  </data>
-  <data name="minute" xml:space="preserve">
-    <value>Minutes </value>
-  </data>
-  <data name="minutes" xml:space="preserve">
-    <value>Minuten</value>
-  </data>
-  <data name="second" xml:space="preserve">
-    <value>Sekunde</value>
-  </data>
-  <data name="seconds" xml:space="preserve">
-    <value>Sekunden</value>
-  </data>
-  <data name="xing-lang" xml:space="preserve">
-    <value>data-lang="de"</value>
+  <data name="file" xml:space="preserve">
+    <value>certificatesDe.json</value>
   </data>
 </root>

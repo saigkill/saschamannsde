@@ -4,19 +4,19 @@ using System.Linq;
 
 namespace WilderBlog.Services.DataProviders
 {
-    public class CertsProvider : DataProvider<Cert>
+    public class CertsDeProvider : DataProvider<CertDe>
     {
-        public CertsProvider(IHostEnvironment env) : base(env, "certificates.json")
+        public CertsDeProvider(IHostEnvironment env) : base(env, "certificatesDe.json")
         {
         }
 
-        public override IEnumerable<Cert> Get()
+        public override IEnumerable<CertDe> Get()
         {
             return base.Get().OrderByDescending(p => p.Id).ToList();
         }
     }
 
-    public class Cert
+    public class CertDe
     {
         public int Id { get; set; }
         public string Certtitle { get; set; }

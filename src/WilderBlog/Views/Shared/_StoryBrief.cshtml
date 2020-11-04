@@ -6,8 +6,8 @@
     var counts = word_count.Count(ch => ch == ' ') + 1;
     var minutes = counts / 200; // Calculate Minutes
     var seconds = counts % 200 / (200 / 60); // Calculate Seconds
-    var str_minutes = (minutes == 1) ? Localizer["minute"].ToString() : Localizer["minutes"].ToString();
-    var str_seconds = (seconds == 1) ? Localizer["second"].ToString() : Localizer["seconds"].ToString();
+    var str_minutes = (minutes == 1) ? Localizer["minute"].Value : Localizer["minutes"].Value;
+    var str_seconds = (seconds == 1) ? Localizer["second"].Value : Localizer["seconds"].Value;
 }
 <div class="card card-body post-card">
     <div class="post-preview">

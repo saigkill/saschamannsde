@@ -1,7 +1,16 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using System.Globalization;
+@using Microsoft.AspNetCore.Mvc.Localization
 @inject WilderBlog.Services.DataProviders.PublicationsProvider publications
 @inject WilderBlog.Services.DataProviders.JobsProvider jobs
-@inject WilderBlog.Services.DataProviders.CertsProvider certs
+@if (CultureInfo.CurrentCulture.Name == "de-DE")
+{
+    @inject WilderBlog.Services.DataProviders.CertsDeProvider certs
+}
+else
+{
+    @inject WilderBlog.Services.DataProviders.CertsProvider certs
+}
+
 @inject WilderBlog.Services.DataProviders.TestimonialsProvider testimonials
 @inject IViewLocalizer Localizer
 @{
@@ -70,7 +79,6 @@
                     <div class="col-md-6 col-lg-5 offset-lg-2 offset-md-1 mt-4">
                         <p>@Localizer["about-other-skills"] SOAP, Wordpress, SCRUM, Git, Linux, Windows, Joomla, Engomo Platform, Apache httpd/Tomcat, BPMN, UML, DocBook/XSL-FO, ITIL/SLA</p>
                     </div>
-
                 </div>
             </div>
         </div>
