@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -10,10 +15,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
 using WilderBlog.Data;
+using WilderBlog.Helpers;
 using WilderBlog.Logger;
 using WilderBlog.MetaWeblog;
 using WilderBlog.Services;
@@ -67,6 +70,8 @@ namespace WilderBlog
             {
                 svcs.AddScoped<IWilderRepository, WilderRepository>();
             }
+
+            svcs.ConfigureHealthChecks(_config);
 
             // Localization part
             //svcs.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -189,6 +194,11 @@ namespace WilderBlog
             app.UseEndpoints(cfg =>
             {
                 cfg.MapControllerRoute(name: "default", pattern: "{controller=Root}/{action=Index}/{id?}");
+                cfg.MapHealthChecks("/hc", new HealthCheckOptions()
+                {
+                    Predicate = _ => true,
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
             });
         }
     }
