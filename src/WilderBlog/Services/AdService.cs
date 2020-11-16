@@ -1,21 +1,18 @@
-﻿using Microsoft.AspNetCore.Html;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Html;
+using Microsoft.Extensions.Logging;
 using WilderBlog.Models;
 
 namespace WilderBlog.Services
 {
     public class AdService
     {
-        private IConfiguration _config;
         private readonly ILogger<AdService> _logger;
 
-        public AdService(IConfiguration config, ILogger<AdService> logger)
+        public AdService(ILogger<AdService> logger)
         {
-            _config = config;
             _logger = logger;
         }
 
