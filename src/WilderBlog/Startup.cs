@@ -115,14 +115,8 @@ namespace WilderBlog
                 options.SupportedUICultures = supportedCultures;
             });
 
-            if (CultureInfo.CurrentCulture.Name == "de-DE")
-            {
-                svcs.AddScoped<CertsDeProvider>();
-            }
-            else
-            {
-                svcs.AddScoped<CertsProvider>();
-            }
+            svcs.AddScoped<CertsDeProvider>();
+            svcs.AddScoped<CertsProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
