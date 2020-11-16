@@ -8,7 +8,6 @@ namespace WilderBlog.Services.DataProviders
     {
         public CertsProvider(IHostEnvironment env) : base(env, "certificates.json")
         {
-
         }
 
         public override IEnumerable<Cert> Get()

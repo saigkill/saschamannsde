@@ -1,4 +1,6 @@
-﻿@inject Microsoft.Extensions.Configuration.IConfiguration config
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@inject Microsoft.Extensions.Configuration.IConfiguration config
 @{
     var keywords = "Android, Java, C#, Linux, Ruby, Windows, Python, Windows Insider, WSL, Windows Subsystem for Linux, openSUSE, Ubuntu, Mono, Xamarin, .NET, XML, WSL, ASP, JavaScript";
     var description = "My personal Blog about Linux, Windows (WSL, Insider), Programming (Ruby, Python, Java, Android ASP and Mono/.NET) and other random stuff";
@@ -21,7 +23,7 @@
     <meta itemprop="author" name='author' content='Sascha Manns' />
     <meta name='designer' content='Sascha Manns' />
     <meta name='contact' content='Sascha.Manns@@outlook.de' />
-    <meta itemprop="copyrightHolder" name='copyright' content='Copyright (c) 2017 - @DateTime.Now.Year by Sascha Manns - All rights Reserved.' />
+    <meta itemprop="copyrightHolder" name='copyright' content='Copyright (c) 2017 - @DateTime.Now.Year @Localizer["copyright"]' />
     <meta itemprop="copyrightYear" content="@DateTime.Now.Year" />
     <meta name="Distribution" content="global" />
     <meta itemprop="inLanguage" name="language" content="German, English" />
@@ -152,19 +154,19 @@
         </ul>
 
         <ul class="navbar-nav navbar-nav-mobile">
-            <li class="active"><a class="nav-link" data-menuanchor="home" href="#home">Start</a></li>
-            <li><a class="nav-link" data-menuanchor="about" href="#about">Über mich</a></li>
+            <li class="active"><a class="nav-link" data-menuanchor="home" href="#home">@Localizer["start"]</a></li>
+            <li><a class="nav-link" data-menuanchor="about" href="#about">@Localizer["about"]</a></li>
             <!--<li><a class="nav-link" data-menuanchor="video" href="#video">Trailer</a></li>-->
-            <li><a class="nav-link" data-menuanchor="experience" href="#experience">Erfahrungen</a></li>
-            <li><a class="nav-link" data-menuanchor="specialization" href="#specialization">Spezialisierungen</a></li>
-            <li><a class="nav-link" data-menuanchor="projects" href="#projects">Projekte</a></li>
+            <li><a class="nav-link" data-menuanchor="experience" href="#experience">@Localizer["experience"]</a></li>
+            <li><a class="nav-link" data-menuanchor="specialization" href="#specialization">@Localizer["specialize"]</a></li>
+            <li><a class="nav-link" data-menuanchor="projects" href="#projects">@Localizer["projects"]</a></li>
             <!--<li><a class="nav-link" data-menuanchor="partners" href="#partners">Partners</a></li>-->
-            <li><a class="nav-link" data-menuanchor="testimonials" href="#testimonials">Empfehlungen</a></li>
+            <li><a class="nav-link" data-menuanchor="testimonials" href="#testimonials">@Localizer["testimonials"]</a></li>
             <!--<li><a class="nav-link" data-menuanchor="news" href="#news">News</a></li>-->
-            <li><a class="nav-link" data-menuanchor="website" asp-controller="Root" asp-action="Index">Zurück zur Website</a></li>
+            <li><a class="nav-link" data-menuanchor="website" asp-controller="Root" asp-action="Index">@Localizer["back"]</a></li>
         </ul>
         <div class="navbar-mobile-footer">
-            <p>© 2020 Sascha Manns. All Rights Reserved.</p>
+            <p>© 2020 @Localizer["copyright"]</p>
         </div>
     </nav>
     <!--<partial name="_CookieConsentPartial" />-->
@@ -208,7 +210,7 @@
             </div>
         </div>
         <div class="footer-copy section-sm">
-            <div class="container">© Copyright 2020 Sascha Manns. All Rights Reserved</div>
+            <div class="container">© Copyright 2020 @Localizer["copyright"]</div>
         </div>
     </footer>
     <environment names="Development">
@@ -253,5 +255,14 @@
         <script src="~/lib/cookieconsent/cookieconsent.min.js"></script>
     </environment>
     @RenderSection("Scripts", required: false)
+
+    <!-- Clarity -->
+    <script type="text/javascript">
+            (function (c, l, a, r, i, t, y) {
+                c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+                t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "@(config["Clarity:ApiKey"])");
+    </script>
 </body>
 </html>

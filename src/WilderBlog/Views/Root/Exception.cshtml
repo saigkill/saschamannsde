@@ -1,9 +1,11 @@
-﻿@{
-    ViewBag.Title = "Error - Sascha Manns's Twilight Zone";
-    ViewBag.PageName = "Error";
-    ViewBag.PageBlurb = "Something went wrong...";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewBag.Title = Localizer["viewbag-title"];
+    ViewBag.PageName = Localizer["viewbag-pagename"];
+    ViewBag.PageBlurb = Localizer["viewbag-pageblurp"];
     ViewBag.PageImage = "/img/headers/cats.jpg";
     ViewBag.ControllerName = "Root";
 }
-<h3>Sorry, an error has occurred. It has been logged. Please try again later.</h3>
+<h3>@Localizer["exception-message"]</h3>
 

@@ -1,11 +1,13 @@
-﻿@model BlogStory
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model BlogStory
 @{
     var word_count = @Model.Body; // Get all content of the story
     var counts = word_count.Count(ch => ch == ' ') + 1;
     var minutes = counts / 200; // Calculate Minutes
     var seconds = counts % 200 / (200 / 60); // Calculate Seconds
-    var str_minutes = (minutes == 1) ? "Minute " : "Minutes ";
-    var str_seconds = (seconds == 1) ? "Second " : "Seconds ";
+    var str_minutes = (minutes == 1) ? Localizer["minute"].Value : Localizer["minutes"].Value;
+    var str_seconds = (seconds == 1) ? Localizer["second"].Value : Localizer["seconds"].Value;
 }
 <div class="card card-body post-card">
     <div class="post-preview">
@@ -13,7 +15,7 @@
         <p class="post-meta">
             <i class="fas fa-calendar"></i> @Model.DatePublished.AddHours(-4).ToString("MMMM dd, yyyy")
             <i class="fas fa-edit"></i> Sascha Manns
-            <i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">No Comments</span>.
+            <i class="fas fa-comments"></i> <span class="disqus-comment-count" data-disqus-identifier="@Model.UniqueId">@Localizer["comments"]</span>.
             <i class="fas fa-clock"></i> @minutes @str_minutes  @seconds @str_seconds
             <br />
             <i class="fas fa-tags"></i>
@@ -23,6 +25,14 @@
             }
         </p>
         @Html.Raw(Model.GetSummary())
+        <div data-type="xing/share" data-counter="right" @Localizer["xing-lang"]></div>
+        <script>
+            ; (function (d, s) {
+                var x = d.createElement(s),
+                    s = d.getElementsByTagName(s)[0];
+                x.src = "https://www.xing-share.com/plugins/share.js";
+                s.parentNode.insertBefore(x, s);
+            })(document, "script");
+        </script>
     </div>
 </div>
-

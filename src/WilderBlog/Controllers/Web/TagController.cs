@@ -1,30 +1,43 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using WilderBlog.Data;
 
 namespace WilderBlog.Controllers
 {
-  [Route("[controller]")]
-  public class TagController : Controller
-  {
-    private IWilderRepository _repo;
-    readonly int _pageSize = 25;
-
-    public TagController(IWilderRepository repo)
+    [Route("[controller]")]
+    public class TagController : Controller
     {
-      _repo = repo;
-    }
+        private IWilderRepository _repo;
+        readonly int _pageSize = 25;
 
-    [HttpGet("{tag}")]
-    public Task<IActionResult> Index(string tag)
-    {
-      return Pager(tag, 1);
-    }
+        public TagController(IWilderRepository repo)
+        {
+            _repo = repo;
+        }
 
-    [HttpGet("{tag}/{page}")]
-    public async Task<IActionResult> Pager(string tag, int page)
-    {
-      return View("Index", await _repo.GetStoriesByTag(tag, _pageSize, page));
+        [HttpGet("{tag}")]
+        public Task<IActionResult> Index(string tag)
+        {
+            return Pager(tag, 1);
+        }
+
+        [HttpGet("{tag}/{page}")]
+        public async Task<IActionResult> Pager(string tag, int page)
+        {
+            return View("Index", await _repo.GetStoriesByTag(tag, _pageSize, page));
+        }
+
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = System.DateTimeOffset.UtcNow.AddYears(1) }
+            );
+            return LocalRedirect(returnUrl);
+        }
     }
-  }
 }

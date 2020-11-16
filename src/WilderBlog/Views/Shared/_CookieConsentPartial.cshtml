@@ -1,5 +1,6 @@
-﻿@using Microsoft.AspNetCore.Http.Features
-
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Http.Features
+@inject IViewLocalizer Localizer
 @{
     var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
     var showBanner = !consentFeature?.CanTrack ?? false;
@@ -9,9 +10,9 @@
 @if (showBanner)
 {
     <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
-        Please read the Privacy Agreement by clicking on "Learn More", then click on "Accept"-Button below. <a asp-controller="Root" asp-action="Privacy">Learn More</a>.
+        @Localizer["cookie-string"] <a asp-controller="Root" asp-action="Privacy">@Localizer["button"]</a>.
         <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
-            <span aria-hidden="true">Accept</span>
+            <span aria-hidden="true">@Localizer["button1"]</span>
         </button>
     </div>
     <script>

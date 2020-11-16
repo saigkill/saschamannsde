@@ -1,8 +1,10 @@
-﻿@model IEnumerable<WilderBlog.Services.DataProviders.Talk>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model IEnumerable<WilderBlog.Services.DataProviders.Talk>
 @{
-    ViewBag.Title = "My Talks - Sascha Manns's Twilight Zone";
-    ViewBag.PageName = "My Talks";
-    ViewBag.PageBlurb = "A collection of my held talks";
+    ViewBag.Title = Localizer["viewbag-title"];
+    ViewBag.PageName = Localizer["viewbag-pagename"];
+    ViewBag.PageBlurb = Localizer["viewbag-pageblurp"];
     ViewBag.PageImage = "/img/headers/code2.jpg";
 }
 @inject IConfiguration config
@@ -27,7 +29,7 @@
 
 }
 <div class="row">
-    <p>In the last years i held some talks on Linux Events. Here some of my slides:</p>
+    <p>@Localizer["slides"]:</p>
     @foreach (var t in Model)
     {
         <div class="col-xl-10 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-xs-12">

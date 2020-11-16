@@ -1,7 +1,18 @@
-﻿@inject WilderBlog.Services.DataProviders.PublicationsProvider publications
+﻿@using System.Globalization;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject WilderBlog.Services.DataProviders.PublicationsProvider publications
 @inject WilderBlog.Services.DataProviders.JobsProvider jobs
+@*@if (CultureInfo.CurrentCulture.Name == "de-DE")
+    {
+        @inject WilderBlog.Services.DataProviders.CertsDeProvider certs
+    }
+    else
+    {
+        @inject WilderBlog.Services.DataProviders.CertsProvider certs
+    }*@
 @inject WilderBlog.Services.DataProviders.CertsProvider certs
 @inject WilderBlog.Services.DataProviders.TestimonialsProvider testimonials
+@inject IViewLocalizer Localizer
 @{
     ViewData["Title"] = "Sascha Manns's Twilight Zone";
     Layout = "~/Views/Shared/_LayoutCV.cshtml";
@@ -17,9 +28,9 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-5">
                         <h1 class="text-white"><span class="text-primary">Sascha</span> Manns.</h1>
-                        <p class="lead mt-4 mb-5">Willkommen auf meinem Curriculum Vitae.</p>
+                        <p class="lead mt-4 mb-5">@Localizer["masterhead-lead"].</p>
                         <!--<button type="button" class="btn" data-toggle="modal" data-target="#send-request">Let's talk</button>-->
-                        <a class="btn" href="mailto:Sascha.Manns@@outlook.de?subject=I%20want%20you&amp;body=We%20want%20a%20beast%20like%20you">Hire me</a>
+                        <a class="btn" href="mailto:Sascha.Manns@@outlook.de?subject=I%20want%20you&amp;body=We%20want%20a%20beast%20like%20you">@Localizer["write-me"]</a>
                     </div>
                 </div>
             </div>
@@ -33,11 +44,11 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-5">
-                        <h3 class="text-uppercase">Mein Name ist <span class="text-primary">Sascha Manns.</span> I bin ein @age jähriger <br /> <span id="replaceJobs"></span></h3>
+                        <h3 class="text-uppercase">@Localizer["about-name"] <span class="text-primary">Sascha Manns.</span> @Localizer["about-jobs"] @age @Localizer["about-year"] <br /> <span id="replaceJobs"></span></h3>
                         <div class="mt-5 pt-2">
-                            <p>Ich liebe es zu Programmieren und Probleme oder Workflows in Lösungen umzusetzen.</p>
+                            <p>@Localizer["about-program"]</p>
                             <div class="mt-5 experience d-flex align-items-center">
-                                <div class="experience-number v2"><span class="position-relative">20</span></div><div class="text-dark mt-3 ml-4">Jahre<br> Erfahrung</div>
+                                <div class="experience-number v2"><span class="position-relative">20</span></div><div class="text-dark mt-3 ml-4">@Localizer["about-year1"]<br> @Localizer["about-experience"]</div>
                             </div>
                         </div>
                     </div>
@@ -66,9 +77,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-5 offset-lg-2 offset-md-1 mt-4">
-                        <p>Andere Skills: SOAP, Wordpress, SCRUM, Git, Linux, Windows, Joomla, Engomo Platform, Apache httpd/Tomcat, BPMN, UML, DocBook/XSL-FO, ITIL/SLA</p>
+                        <p>@Localizer["about-other-skills"] SOAP, Wordpress, SCRUM, Git, Linux, Windows, Joomla, Engomo Platform, Apache httpd/Tomcat, BPMN, UML, DocBook/XSL-FO, ITIL/SLA</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -93,7 +103,7 @@
     <section id="experience" class="section pp-scrollable d-flex align-items-center position-absolute">
         <div class="intro">
             <div class="container">
-                <h2><span class="text-primary">Berufserfahrungen</span></h2>
+                <h2><span class="text-primary">@Localizer["experience-header"]</span></h2>
                 <div class="mt-5 pt-5">
                     @foreach (var job in jobs.Get())
                     {
@@ -110,12 +120,12 @@
                                 <p>Stack: <i>@job.Stack</i></p>
                                 @if (!string.IsNullOrWhiteSpace(job.Link))
                                 {
-                                    <a target="_blank" href="@job.Link" class="btn">Arbeitszeugnis</a>
+                                    <a target="_blank" href="@job.Link" class="btn">@Localizer["experience-cert-employment"]</a>
                                 }
                             </div>
                         </div>
                     }
-                    <a target="_blank" href="~/downloads/curriculum_vitae.pdf" class="btn">Download cv</a>
+                    <a target="_blank" href="~/downloads/curriculum_vitae.pdf" class="btn">@Localizer["experience-downloadcv"]</a>
                 </div>
             </div>
         </div>
@@ -124,7 +134,7 @@
     <section id="experience" class="section pp-scrollable d-flex align-items-center position-absolute">
         <div class="intro">
             <div class="container">
-                <h2><span class="text-primary">Aus &amp; Weiterbildungen</span></h2>
+                <h2><span class="text-primary">@Localizer["experience-header1"]</span></h2>
                 <div class="mt-5 pt-5">
                     @foreach (var cert in certs.Get())
                     {
@@ -140,12 +150,12 @@
                                 <p>Inhalte: <i>@cert.Content</i></p>
                                 @if (!string.IsNullOrWhiteSpace(cert.Link))
                                 {
-                                    <a target="_blank" href="@cert.Link" class="btn">Zertifikat</a>
+                                    <a target="_blank" href="@cert.Link" class="btn">@Localizer["experience-certs"]</a>
                                 }
                             </div>
                         </div>
                     }
-                    <a target="_blank" href="~/downloads/curriculum_vitae.pdf" class="btn">Download cv</a>
+                    <a target="_blank" href="~/downloads/curriculum_vitae.pdf" class="btn">@Localizer["experience-downloadcv"]</a>
                 </div>
             </div>
         </div>
@@ -155,23 +165,23 @@
     <section id="services" class="navbar-is-white section pp-scrollable d-flex align-items-center position-absolute bg-dark">
         <div class="intro">
             <div class="container">
-                <h2 class="text-white"><span class="text-primary">Meine</span> Spezialisierungen.</h2>
+                <h2 class="text-white"><span class="text-primary">@Localizer["services-my"]</span> @Localizer["services-specialization"].</h2>
                 <div class="mt-5 pt-5">
                     <div class="row">
                         <div class="col-md-4 mb-4 mb-md-0">
                             <ion-icon class="text-white" name="phone-portrait-outline"></ion-icon>
-                            <h6 class="text-white">App-Entwicklung</h6>
-                            <p>Mittels moderner Frameworks wie .NET, Angular und anderen, setze ich Ihre Workflows in plattformunabhängige Apps um.</p>
+                            <h6 class="text-white">@Localizer["services-app"]</h6>
+                            <p>@Localizer["services-app-blurp"]</p>
                         </div>
                         <div class="col-md-4 mb-4 mb-md-0">
                             <ion-icon class="text-white" name="earth-outline"></ion-icon>
-                            <h6 class="text-white">Web-Entwicklung</h6>
-                            <p>Ihre Webseiten erstelle ich mittels Technologien, wie ASP .NET, PHP, Angular oder Vue.js.</p>
+                            <h6 class="text-white">@Localizer["services-web"]</h6>
+                            <p>@Localizer["services-web-blurp"]</p>
                         </div>
                         <div class="col-md-4">
                             <ion-icon class="text-white" name="construct-outline"></ion-icon>
-                            <h6 class="text-white">Softwarearchitektur</h6>
-                            <p>Als Softwarearchitekt sorge ich dafür, das vorhandener Code wartbar und portierbar bleibt und somit fit für Ihre Firmenzukunft.</p>
+                            <h6 class="text-white">@Localizer["services-architect"]</h6>
+                            <p>@Localizer["services-architect-blurp"]</p>
                         </div>
                     </div>
                 </div>
@@ -183,7 +193,7 @@
     <section id="projects" class="section pp-scrollable d-flex align-items-center position-absolute bg-light">
         <div class="intro">
             <div class="container">
-                <h2><span class="text-primary">Letzte</span> Projekte.</h2>
+                <h2><span class="text-primary">@Localizer["last"]</span> @Localizer["projects"].</h2>
                 <div class="mt-5 pt-4">
                     <div class="carousel-project owl-carousel">
                         <div class="project-item">
@@ -192,7 +202,7 @@
                                     <img alt="" class="w-100" src="img/portfolio/MannsBlog.png">
                                     <figcaption class="text-white">
                                         <h3 class="mb-2 text-white"><a href="https://github.com/saigkill/saschamannsde">MannsBlog</a></h3>
-                                        <p>Diese Webseite.</p>
+                                        <p>@Localizer["projects-1-blurp"].</p>
                                     </figcaption>
                                 </figure>
                             </a>
@@ -203,7 +213,7 @@
                                     <img alt="" class="w-100" src="https://raw.githubusercontent.com/saigkill/latex_curriculum_vitae-dotnet/master/docs/doc/images/WriteJobApplication.png">
                                     <figcaption class="text-white">
                                         <h3 class="mb-2 text-white"><a href="http://saigkill.github.io/latex_curriculum_vitae-dotnet">Latex Curriculum Vitae</a></h3>
-                                        <p>Ein Hilfsprogramm um mittels LaTEX eine Bewerbung zu schreiben und den Status aller gesendeten zu verwalten.</p>
+                                        <p>@Localizer["project-2-blurp"]</p>
                                     </figcaption>
                                 </figure>
                             </a>
@@ -265,7 +275,7 @@
     <!-- Testimonials -->
     <section id="testimonials" class="testimonials section">
         <div class="container">
-            <h2><span class="text-primary">Letzte</span> Empfehlungen.</h2>
+            <h2><span class="text-primary">@Localizer["testimonials"]</span> @Localizer["testimonials-testimonial"].</h2>
             <div class="carousel-project owl-carousel">
                 @foreach (var test in testimonials.Get())
                 {
@@ -325,148 +335,147 @@
                 </div>
             </div>
         </section>*@
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="send-request">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title mt-0">Send request</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>
-                    Leave your contacts and our managers
-                    will contact you soon.
-                </p>
-                <form class="form-request js-ajax-form">
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" required="" placeholder="Email *">
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="3" name="message" class="form-control" placeholder="Message"></textarea>
-                    </div>
-                    <div class="message" id="success-message">Your message is successfully sent...</div>
-                    <div class="message" id="error-message">Sorry something went wrong</div>
-                    <div class="form-group mb-0 text-right">
-                        <button type="submit" class="btn">Submit</button>
-                    </div>
-                </form>
+    <!-- Modal -->
+    <div class="modal fade" id="send-request">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title mt-0">Send request</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Leave your contacts and our managers
+                        will contact you soon.
+                    </p>
+                    <form class="form-request js-ajax-form">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" required="" placeholder="Email *">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="3" name="message" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="message" id="success-message">Your message is successfully sent...</div>
+                        <div class="message" id="error-message">Sorry something went wrong</div>
+                        <div class="form-group mb-0 text-right">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Project Modal Dialog 1 -->
-<div id="project1" class="container mfp-hide zoom-anim-dialog">
-    <h2 class="mt-0">Neuro</h2>
-    <div class="mt-5 pt-2 text-dark">
-        <div class="row">
-            <div class="mb-5 col-md-6 col-lg-3">
-                <h6 class="my-0">Clients:</h6>
-                <span>Ethan Hunt, John Doe</span>
+    <!-- Project Modal Dialog 1 -->
+    <div id="project1" class="container mfp-hide zoom-anim-dialog">
+        <h2 class="mt-0">Neuro</h2>
+        <div class="mt-5 pt-2 text-dark">
+            <div class="row">
+                <div class="mb-5 col-md-6 col-lg-3">
+                    <h6 class="my-0">Clients:</h6>
+                    <span>Ethan Hunt, John Doe</span>
+                </div>
+                <div class="mb-5 col-md-6 col-lg-3">
+                    <h6 class="my-0">Completion:</h6>
+                    <span>February 5th, 2020</span>
+                </div>
+                <div class="mb-5 col-md-6 col-lg-3">
+                    <h6 class="my-0">Project Type:</h6>
+                    <span>Illustration</span>
+                </div>
+                <div class="mb-5 col-md-6 col-lg-3">
+                    <h6 class="my-0">Authors</h6>
+                    <span>Logan Cee, Paul</span>
+                </div>
             </div>
-            <div class="mb-5 col-md-6 col-lg-3">
-                <h6 class="my-0">Completion:</h6>
-                <span>February 5th, 2020</span>
-            </div>
-            <div class="mb-5 col-md-6 col-lg-3">
-                <h6 class="my-0">Project Type:</h6>
-                <span>Illustration</span>
-            </div>
-            <div class="mb-5 col-md-6 col-lg-3">
-                <h6 class="my-0">Authors</h6>
-                <span>Logan Cee, Paul</span>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <h6 class="my-0">Budget:</h6>
+                    <span>$12000</span>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h6 class="my-0">Authors</h6>
+                    <span>Logan Cee, Paul</span>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-3">
-                <h6 class="my-0">Budget:</h6>
-                <span>$12000</span>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <h6 class="my-0">Authors</h6>
-                <span>Logan Cee, Paul</span>
-            </div>
-        </div>
+        <img alt="" class="mt-5 pt-2 w-100" src="img/cv/portfolio/1140x641-1.jpg">
     </div>
-    <img alt="" class="mt-5 pt-2 w-100" src="img/cv/portfolio/1140x641-1.jpg">
-</div>
 
-<!-- Project Modal Dialog 2 -->
-<div id="project2" class="container mfp-hide zoom-anim-dialog">
-    <h2 class="mt-0">Neuro</h2>
-    <div class="mt-5 pt-2 text-dark">
-        <div class="row">
-            <div class="col-md-3">
-                <h6 class="my-0">Clients:</h6>
-                <span>Ethan Hunt, John Doe</span>
+    <!-- Project Modal Dialog 2 -->
+    <div id="project2" class="container mfp-hide zoom-anim-dialog">
+        <h2 class="mt-0">Neuro</h2>
+        <div class="mt-5 pt-2 text-dark">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="my-0">Clients:</h6>
+                    <span>Ethan Hunt, John Doe</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Completion:</h6>
+                    <span>February 5th, 2020</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Project Type:</h6>
+                    <span>Illustration</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Authors</h6>
+                    <span>Logan Cee, Paul</span>
+                </div>
             </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Completion:</h6>
-                <span>February 5th, 2020</span>
-            </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Project Type:</h6>
-                <span>Illustration</span>
-            </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Authors</h6>
-                <span>Logan Cee, Paul</span>
+            <div class="mt-5 row">
+                <div class="col-md-3">
+                    <h6 class="my-0">Budget:</h6>
+                    <span>$12000</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Authors</h6>
+                    <span>Logan Cee, Paul</span>
+                </div>
             </div>
         </div>
-        <div class="mt-5 row">
-            <div class="col-md-3">
-                <h6 class="my-0">Budget:</h6>
-                <span>$12000</span>
-            </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Authors</h6>
-                <span>Logan Cee, Paul</span>
-            </div>
-        </div>
+        <img alt="" class="mt-5 pt-2 w-100" src="img/cv/portfolio/1140x641-2.jpg">
     </div>
-    <img alt="" class="mt-5 pt-2 w-100" src="img/cv/portfolio/1140x641-2.jpg">
-</div>
 
-<!-- Project Modal Dialog 3 -->
-<div id="project3" class="container mfp-hide zoom-anim-dialog">
-    <h2 class="mt-0">Neuro</h2>
-    <div class="mt-5 pt-2 text-dark">
-        <div class="row">
-            <div class="col-md-3">
-                <h6 class="my-0">Clients:</h6>
-                <span>Ethan Hunt, John Doe</span>
+    <!-- Project Modal Dialog 3 -->
+    <div id="project3" class="container mfp-hide zoom-anim-dialog">
+        <h2 class="mt-0">Neuro</h2>
+        <div class="mt-5 pt-2 text-dark">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="my-0">Clients:</h6>
+                    <span>Ethan Hunt, John Doe</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Completion:</h6>
+                    <span>February 5th, 2020</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Project Type:</h6>
+                    <span>Illustration</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Authors</h6>
+                    <span>Logan Cee, Paul</span>
+                </div>
             </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Completion:</h6>
-                <span>February 5th, 2020</span>
-            </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Project Type:</h6>
-                <span>Illustration</span>
-            </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Authors</h6>
-                <span>Logan Cee, Paul</span>
+            <div class="mt-5 row">
+                <div class="col-md-3">
+                    <h6 class="my-0">Budget:</h6>
+                    <span>$12000</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="my-0">Authors</h6>
+                    <span>Logan Cee, Paul</span>
+                </div>
             </div>
         </div>
-        <div class="mt-5 row">
-            <div class="col-md-3">
-                <h6 class="my-0">Budget:</h6>
-                <span>$12000</span>
-            </div>
-            <div class="col-md-3">
-                <h6 class="my-0">Authors</h6>
-                <span>Logan Cee, Paul</span>
-            </div>
-        </div>
+        <img alt="" class="mt-5 pt-2 w-100" src="img/cv/portfolio/1140x641-3.jpg">
     </div>
-    <img alt="" class="mt-5 pt-2 w-100" src="img/cv/portfolio/1140x641-3.jpg">
-</div>
