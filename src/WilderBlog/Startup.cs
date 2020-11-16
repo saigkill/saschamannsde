@@ -198,7 +198,8 @@ namespace WilderBlog
             app.UseEndpoints(cfg =>
             {
                 cfg.MapControllerRoute(name: "default", pattern: "{controller=Root}/{action=Index}/{id?}");
-                cfg.MapHealthChecks("/hc", new HealthCheckOptions()
+                cfg.MapHealthChecks("/_hc");
+                cfg.MapHealthChecks("/_hc.json", new HealthCheckOptions()
                 {
                     Predicate = _ => true,
                     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
