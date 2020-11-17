@@ -1,10 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using WilderBlog.Config;
 using WilderBlog.Data;
 
 namespace WilderBlog
@@ -18,22 +17,21 @@ namespace WilderBlog
                   .UseStartup<Startup>()
                   .Build();
 
-            Seed(host).Wait();
+            if (args.Contains("/seed"))
+            {
+                Seed(host).Wait();
+            }
 
             host.Run();
         }
 
         private static async Task Seed(IWebHost host)
         {
-            var settings = host.Services.GetService<IOptions<AppSettings>>();
-            if (settings.Value.WilderDb.TestData)
+            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
+            using (var scope = scopeFactory.CreateScope())
             {
-                var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
-                using (var scope = scopeFactory.CreateScope())
-                {
-                    var initializer = scope.ServiceProvider.GetService<WilderInitializer>();
-                    await initializer.SeedAsync();
-                }
+                var initializer = scope.ServiceProvider.GetService<WilderInitializer>();
+                await initializer.SeedAsync();
             }
         }
 

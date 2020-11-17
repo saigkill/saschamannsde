@@ -17,8 +17,9 @@ namespace WilderBlog.Services
         private readonly IOptions<AppSettings> _settings;
         private readonly IHttpContextAccessor _ctxAccessor;
 
-        public GoogleCaptchaService(ILogger<GoogleCaptchaService> logger, IOptions<AppSettings> settings,
-          IHttpContextAccessor ctxAccessor)
+        public GoogleCaptchaService(ILogger<GoogleCaptchaService> logger,
+            IOptions<AppSettings> settings,
+            IHttpContextAccessor ctxAccessor)
         {
             _logger = logger;
             _settings = settings;

@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace WilderBlog.Data
 {
@@ -10,7 +10,8 @@ namespace WilderBlog.Data
         private WilderContext _ctx;
         private UserManager<WilderUser> _userMgr;
 
-        public WilderInitializer(WilderContext ctx, UserManager<WilderUser> userMgr)
+        public WilderInitializer(WilderContext ctx,
+            UserManager<WilderUser> userMgr)
         {
             _ctx = ctx;
             _userMgr = userMgr;
