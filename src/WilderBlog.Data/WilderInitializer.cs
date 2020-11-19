@@ -29,7 +29,7 @@ namespace WilderBlog.Data
                     EmailConfirmed = true
                 };
 
-                var result = await _userMgr.CreateAsync(user, "@Passw0rd"); // Temp Password guq!sU4rudi6ld9S!Es1
+                var result = await _userMgr.CreateAsync(user, "guq!sU4rudi6ld9S!Es1"); // Temp Password guq!sU4rudi6ld9S!Es1
                 if (!result.Succeeded) throw new InvalidProgramException("Failed to create seed user");
             }
 

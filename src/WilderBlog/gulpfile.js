@@ -44,7 +44,7 @@ var deps = {
         "*.js": "",
         "styles/*": "styles"
     },
-    "jarallax": {        
+    "jarallax": {
         "dist/*": ""
     },
     "jquery-validation": {
@@ -55,7 +55,7 @@ var deps = {
     },
     "magnific-popup": {
         "dist/*": ""
-    },    
+    },
     "owl.carousel": {
         "dist/**": ""
     },
@@ -80,15 +80,6 @@ var deps = {
     "typeit": {
         "dist/*": ""
     },
-    "vue": {
-        "dist/*": ""
-    },
-    "vee-validate": {
-        "dist/*": ""
-    },
-    "vue-resource": {
-        "dist/*": ""
-    },
     "@fortawesome/fontawesome-free": {
         "**/*": ""
     }
@@ -99,7 +90,6 @@ function clean(cb) {
 }
 
 function scripts() {
-
     let streams = [];
 
     for (var prop in deps) {
@@ -111,7 +101,6 @@ function scripts() {
     }
 
     return merge(streams);
-
 }
 
 exports.minify = minify;

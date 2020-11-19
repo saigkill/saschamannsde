@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace WilderBlog.Services
 {
@@ -26,9 +26,8 @@ namespace WilderBlog.Services
                 await _mailService.SendMailAsync("exceptionmessage.txt", "Sascha Manns", "Sascha.Manns@outlook.de", "[MannsBlog Exception]", ex.ToString());
 
                 // Don't swallow the exception
-                throw ex;
+                throw;
             }
-
         }
     }
 }

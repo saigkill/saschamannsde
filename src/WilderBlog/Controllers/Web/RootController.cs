@@ -1,4 +1,10 @@
-﻿using HtmlAgilityPack;
+﻿using System;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using HtmlAgilityPack;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
@@ -7,12 +13,6 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using WilderBlog.Data;
 using WilderBlog.Models;
 using WilderBlog.Services;
@@ -23,7 +23,7 @@ namespace WilderBlog.Controllers
     [Route("")]
     public class RootController : Controller
     {
-        readonly int _pageSize = 10;
+        private readonly int _pageSize = 12;
 
         private IMailService _mailService;
         private IWilderRepository _repo;
@@ -80,7 +80,6 @@ namespace WilderBlog.Controllers
             }
 
             return Redirect("/");
-
         }
 
         [HttpPost]
@@ -273,7 +272,6 @@ Exception: ${exception.Error}";
             }
 
             return File(Encoding.UTF8.GetBytes(feed.Serialize()), "text/xml");
-
         }
 
         [HttpGet("feed-de")]
@@ -603,8 +601,5 @@ Exception: ${exception.Error}";
         {
             return View();
         }
-
-
-
     }
 }

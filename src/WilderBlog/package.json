@@ -20,17 +20,16 @@
     "magnific-popup": "1.1.0",
     "owl.carousel": "2.3.4",
     "pagepiling.js": "1.5.6",
-    "prismjs": "1.21.0",
     "popper.js": "^1.14.7",
+    "prismjs": "1.21.0",
     "respond.js": "1.4.2",
     "slick-carousel": "1.8.1",
     "tether": "1.4.7",
-    "typeit": "7.0.4",
-    "vee-validate": "2.2.15",
-    "vue": "2.6.11",
-    "vue-resource": "1.5.1"
+    "typeit": "7.0.4"
   },
   "devDependencies": {
+    "@vue/cli": "4.5.8",
+    "@vue/cli-service-global": "4.5.8",
     "gulp": "^4.0.2",
     "gulp-concat": "2.6.1",
     "gulp-uglify": "3.0.2",
