@@ -53,28 +53,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\app\contact.html" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="client\babel.config.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="client\babel.config.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="client\src\assets\" />
     <Folder Include="wwwroot\fonts\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="client\src\contact\ContactMail.ts" />
-    <TypeScriptCompile Include="client\src\contact\index.ts" />
-    <TypeScriptCompile Include="client\src\main.ts" />
-    <TypeScriptCompile Include="client\src\shims-vue.d.ts" />
-    <TypeScriptCompile Include="client\src\store\index.ts" />
   </ItemGroup>
 
   <Target Name="PrepublishScript" BeforeTargets="BeforePublish">

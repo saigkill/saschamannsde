@@ -1,11 +1,13 @@
-﻿export const subjects = [
-    "Pick One...",
-    "Talk Request",
-    "Coaching",
-    "Course Question",
-    "Other",
+export const subjects = [
+  "Pick One...",
+  "Training",
+  "Coaching",
+  "Course Question",
+  "Business Proposition",
+  "Film Question",
+  "Other",
 ];
 
 export default {
-    subjects
+  subjects
 };
